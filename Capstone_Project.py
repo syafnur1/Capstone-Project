@@ -43,7 +43,7 @@ wisman ke Indonesia mencapai **1000%** di tahun 2020.'''
 ''' ### Hubungan Jumlah Turis dengan Pandemi'''
 
 # Grafik jumlah turis pintu masuk dan covid harian
-
+# Grafik korelasi
 ''' Dari kedua grafik diatas dapat diambil kesimpulan bahwa kasus Covid-19 yang muncul di tahun 2020 mempengaruhi jumlah wisman 
 yang masuk ke Indonesia dari berbagai Pintu Masuk. Menjadi sangat sedikit ketika kasus positif harian mencapai puncaknya di tahun 2021. '''
 
@@ -51,6 +51,8 @@ yang masuk ke Indonesia dari berbagai Pintu Masuk. Menjadi sangat sedikit ketika
 
 ''' Dapat dilihat bahwa wisman yang banyak berpariwisata ke indonesia adalah negara-negara tetangga,
 mayoritas berasal dari benua Asia dan Australia yang jaraknya tidak jauh dari Indonesia. '''
+
+# Machine Learning + grafiknya
 
 '''
 # Daftar Pustaka
