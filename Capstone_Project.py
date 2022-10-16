@@ -35,11 +35,10 @@ terjadi pandemi covid-19 di seluruh dunia termasuk Indonesia pada awal tahun 202
 wisman ke Indonesia mencapai **1000%** di tahun 2020.'''
 
 # CHart
-df1= df.iloc[0:10]
-st.line_chart(data=df1, x = 'Ship Date', y = 'Profit', width=0, height=0, use_container_width=True)
+#df1= df.iloc[0:10]
+#st.line_chart(data=df1, x = 'Ship Date', y = 'Profit', width=0, height=0, use_container_width=True)
 
-
-st.bar_chart(data=df1, x = 'Ship Date', y = 'Profit')
+#st.bar_chart(data=df1, x = 'Ship Date', y = 'Profit')
 
 '''
 # Daftar Pustaka
