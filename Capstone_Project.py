@@ -40,6 +40,18 @@ wisman ke Indonesia mencapai **1000%** di tahun 2020.'''
 
 #st.bar_chart(data=df1, x = 'Ship Date', y = 'Profit')
 
+''' ### Hubungan Jumlah Turis dengan Pandemi'''
+
+# Grafik jumlah turis pintu masuk dan covid harian
+
+''' Dari kedua grafik diatas dapat diambil kesimpulan bahwa kasus Covid-19 yang muncul di tahun 2020 mempengaruhi jumlah wisman 
+yang masuk ke Indonesia dari berbagai Pintu Masuk. Menjadi sangat sedikit ketika kasus positif harian mencapai puncaknya di tahun 2021. '''
+
+# top 5 negara terbanyak ke indonesia
+
+''' Dapat dilihat bahwa wisman yang banyak berpariwisata ke indonesia adalah negara-negara tetangga,
+mayoritas berasal dari benua Asia dan Australia yang jaraknya tidak jauh dari Indonesia. '''
+
 '''
 # Daftar Pustaka
 [BPS](https://www.bps.go.id/indicator/16/1150/1/jumlah-kunjungan-wisatawan-mancanegara-per-bulan-ke-indonesia-menurut-pintu-masuk-2017---sekarang.html)
