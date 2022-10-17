@@ -99,7 +99,7 @@ st.dataframe(country.style.highlight_max(axis=0),use_container_width=True)
 ## Contacts
 [![MAIL Badge](https://img.shields.io/badge/-z26syafnur@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:z26syafnur@gmail.com)](mailto:z26syafnur@gmail.com)
 
-[![LinkedIn](https://img.shields.io/badge/syafnur-zulfikri-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)]
+[![LinkedIn](https://img.shields.io/badge/syafnur-zulfikri-0077B5?style=for-the-badge&logo=linkedin&logoColor=white&link=https://www.linkedin.com/in/syafnur-zulfikri/)](https://www.linkedin.com/in/syafnur-zulfikri/)
 
 
 (C) Zulfikri Syafnur, 2022
