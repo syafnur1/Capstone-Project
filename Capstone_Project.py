@@ -19,13 +19,13 @@ st.image(image, use_column_width='auto', caption = "Sumber : barantum.com")
 [Pariwisata](https://id.wikipedia.org/wiki/Pariwisata) merupakan cara suatu negara mempromosikan negara tersebut sehingga dapat dikinjungi oleh banyak orang. Di Indonesia, contoh pariwisata yang menjadi tujuan wisata yang terkenal di dunia adalah [Bali](https://bali.com/). Bali terkenal dengan berbagai objek wisatanya seperti wisata alam, wisata budaya, dan wisata bahari
 '''
 
-st.subheader("Jumlah Wisatawan Asing Masuk ke Indonesia")
+st.subheader("Jumlah Turis Asing Masuk ke Indonesia")
 df = pd.DataFrame([[13514963], [16106954], [4052923], [1557530], [202823]],
                     index=['2018', '2019', '2020', '2021', '2022'],
                     columns=['Jumlah Turis'])
 st.line_chart(data=df, use_container_width=True) 
 st.caption('Sumber : Badan Pusat Statistik')
-'''Menurut Badan Pusat Statistik, tingkat wisatawan mancanegara (wisman) yang datang ke Indonesia dari hingga tahun 2019 mengalami kenaikan sebanyak **2 juta** wisman, hal ini dapat dilihat pada grafik diatas. Namun saat tingkat wisman yang datang sedang tinggi, terjadi pandemi covid-19 di seluruh dunia termasuk Indonesia pada awal tahun 2020. Hal ini memberikan dampak negatif dengan menurun drastisnya wisman ke Indonesia mencapai **1000%** di tahun 2020.'''
+'''Menurut Badan Pusat Statistik, tingkat turis (wisatawan mancanegara) yang datang ke Indonesia dari hingga tahun 2019 mengalami kenaikan sebanyak **2 juta** turis, hal ini dapat dilihat pada grafik diatas. Namun saat tingkat turis yang datang sedang tinggi, terjadi pandemi covid-19 di seluruh dunia termasuk Indonesia pada awal tahun 2020 hingga sekarang. Hal ini memberikan dampak negatif dengan menurun drastisnya turis ke Indonesia mencapai **1000%** di tahun 2020.'''
 
 # Grafik jumlah turis pintu masuk dan covid harian
 st.subheader("Hubungan Jumlah Turis dengan Pandemi")
@@ -41,10 +41,18 @@ with col2:
    image = Image.open("Positif.png")
    st.image(image, use_column_width='auto', caption ='Sumber : kawalcovid19.id')
 
+''' Dari kedua grafik diatas dapat diambil kesimpulan bahwa kasus Covid-19 yang muncul di tahun 2020 mempengaruhi jumlah turis yang masuk ke Indonesia dari berbagai Pintu Masuk. Sehingga menjadi sangat sedikit turis yang masuk ketika kasus positif harian mencapai puncaknya di tahun 2021.'''
 # Grafik korelasi
-''' Dari kedua grafik diatas dapat diambil kesimpulan bahwa kasus Covid-19 yang muncul di tahun 2020 mempengaruhi jumlah wisman 
-yang masuk ke Indonesia dari berbagai Pintu Masuk. Menjadi sangat sedikit ketika kasus positif harian mencapai puncaknya di tahun 2021. '''
+''' **Apakah terdapat hubungan antara Jumlah Turis dengan Pandemi Covid?**
 
+- H0 : Tidak terdapat hubungan antara Jumlah Turis dengan Pandemi Covid
+
+- H1 : Terdapat hubungan antara Jumlah Turis dengan Pandemi Covid
+
+p-value = 0
+
+Dari hasil two tailed p_value, didapatkan bahwa p-value = 0 < alpha. Hal ini berarti kita dapat mereject H0. Dengan demikian Pandemi Covid berpengaruh signifikan terhadap Jumlah Turis yang memasuki Indonesia.
+'''
 # Deklarasi dataset
 #df1 = pd.read_excel('/content/Data Gabungan Turis.xlsx', sheet_name='Sheet2')
 
