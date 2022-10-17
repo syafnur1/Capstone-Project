@@ -79,8 +79,7 @@ st.dataframe(country,use_container_width=True)
 
 # top 5 negara terbanyak ke indonesia
 
-''' Dapat dilihat bahwa wisman yang banyak berpariwisata ke indonesia adalah negara-negara tetangga,
-mayoritas berasal dari benua Asia dan Australia yang jaraknya tidak jauh dari Indonesia. '''
+''' Dapat dilihat bahwa **Top 5** Turis yang banyak berkunjung ke Indonesia adalah negara-negara tetangga, dan mayoritas negara tersebut berasal dari benua Asia yang jaraknya tidak jauh dari Indonesia.'''
 
 # Machine Learning + grafiknya
 
