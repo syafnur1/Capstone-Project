@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 from PIL import Image
-
+import altair as alt
 st.set_page_config(layout="wide")
 image = Image.open("Barantum.png")
 st.image(image, use_column_width='auto', caption = "Sumber : barantum.com")
@@ -55,6 +55,9 @@ st.code(code, language = 'python')
 
 '''Dari hasil korelasi diatas, didapatkan bahwa **r = -0,42** . Hal ini berarti kita dapat mereject **H0**. Dengan demikian Pandemi Covid **mempengaruhi secara signifikan** terhadap Jumlah Turis yang memasuki Indonesia.'''
 
+# Turis yang masuk per Negara Asal
+st.subheader("Kunjungan Turis berdasarkan Negara Asal")
+
 # Deklarasi dataset
 #df1 = pd.read_excel('/content/Data Gabungan Turis.xlsx', sheet_name='Sheet2')
 
@@ -89,4 +92,6 @@ mayoritas berasal dari benua Asia dan Australia yang jaraknya tidak jauh dari In
 [Model Decision Tree untuk Prediksi Jadwal Kerja menggunakan Scikit-Learn](https://jurnal.umj.ac.id/index.php/semnastek/article/view/5239/3517)
 
 [barantum.com](https://www.barantum.com/blog/wp-content/uploads/2019/01/Wisata-Indonesia-Mempunyai-Peluang-Bisnis.jpg)
+
+[Statistika Non-Parametrik Analisis Jalur](https://slideplayer.info/slide/3099519)
 '''   
