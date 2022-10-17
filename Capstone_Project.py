@@ -23,7 +23,7 @@ Bali terkenal dengan berbagai objek wisatanya seperti wisata alam, wisata budaya
 df = pd.DataFrame([[13514963], [16106954], [4052923], [1557530], [202823]],
                     index=[2018, 2019, 2020, 2021, 2022],
                     columns=['Jumlah Turis'])
-st.bar_chart(data=df)
+st.line_chart(data=df, use_container_width=True, base="dark", primaryColor="purple")
 
 # Data prep
 
