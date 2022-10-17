@@ -2,7 +2,8 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 from PIL import Image
-import plotly.express as px
+import ee
+import geemap.foliumap as geemap
 
 st.set_page_config(layout="wide")
 image = Image.open("Barantum.png")
