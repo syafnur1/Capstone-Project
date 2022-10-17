@@ -3,6 +3,8 @@ import pandas as pd
 import numpy as np
 from PIL import Image
 import altair as alt
+import requests
+
 st.set_page_config(layout="wide")
 image = Image.open("Barantum.png")
 st.image(image, use_column_width='auto', caption = "Sumber : barantum.com")
@@ -105,6 +107,10 @@ url_metadata = (
 @st.cache
 def get_data():
     return pd.read_csv(url_csv, parse_dates=["created", "modified"])
+
+@st.cache
+def get_meta():
+    return requests.get(url_metadata).json()
 
 _df = get_data()
 st.subheader("Kunjungan Turis berdasarkan Negara Asal")
