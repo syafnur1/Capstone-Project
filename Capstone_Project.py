@@ -95,3 +95,4 @@ mayoritas berasal dari benua Asia dan Australia yang jaraknya tidak jauh dari In
 [barantum.com](https://www.barantum.com/blog/wp-content/uploads/2019/01/Wisata-Indonesia-Mempunyai-Peluang-Bisnis.jpg)
 
 [Statistika Non-Parametrik Analisis Jalur](https://slideplayer.info/slide/3099519)
+'''
