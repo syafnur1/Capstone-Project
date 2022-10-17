@@ -21,7 +21,7 @@ st.set_page_config(layout="wide")
 df = pd.DataFrame([[13514963], [16106954], [4052923], [1557530], [202823]],
                     index=['2018', '2019', '2020', '2021', '2022'],
                     columns=['Jumlah Turis'])
-st.line_chart(data=df, use_container_width=True)
+st.line_chart(data=df, use_container_width=True, 'Jumlah Wisatawan Asing Masuk ke Indonesia')
 
 # Data prep
 
