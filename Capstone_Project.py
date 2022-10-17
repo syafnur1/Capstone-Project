@@ -61,7 +61,7 @@ st.subheader("Kunjungan Turis berdasarkan Negara Asal")
 # Deklarasi dataset
 country = pd.read_csv('https://docs.google.com/spreadsheets/d/e/2PACX-1vTXspAWpKN-lhLVzwafiDNnwXAUf_l_I-xsdO3AVT0bDzTsgS5NyMnaOQRB865eBscEt9NKka4cJ-pw/pub?gid=0&single=true&output=csv')
 
-st.dataframe(country,index=,use_container_width=True)
+st.dataframe(country,index=True,use_container_width=True)
 # Data prep
 
 # End of Data Prep
