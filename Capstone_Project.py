@@ -4,6 +4,8 @@ import numpy as np
 from PIL import Image
 
 st.set_page_config(layout="wide")
+image = Image.open("Barantum.png")
+st.image(image, use_column_width='auto', caption = "Sumber : barantum.com")
 
 '''
     # Analisis Pemulihan sektor Pariwisata pasca Pandemi di Indonesia
@@ -22,7 +24,8 @@ st.subheader("Jumlah Wisatawan Asing Masuk ke Indonesia")
 df = pd.DataFrame([[13514963], [16106954], [4052923], [1557530], [202823]],
                     index=['2018', '2019', '2020', '2021', '2022'],
                     columns=['Jumlah Turis'])
-st.line_chart(data=df, use_container_width=True) st.caption('Sumber : Badan Pusat Statistik')
+st.line_chart(data=df, use_container_width=True) 
+st.caption('Sumber : Badan Pusat Statistik')
 
 # Data prep
 
