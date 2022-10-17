@@ -32,12 +32,12 @@ st.subheader("Hubungan Jumlah Turis dengan Pandemi")
 col1, col2 = st.columns(2)
 with col1:
    st.subheader("Jumlah Turis per Pintu Masuk")
-    image = Image.open("Pinturis.png")
+   image = Image.open("Pinturis.png")
    st.image(image, use_column_width='auto', caption ='Sumber : Badan Pusat Statistik')
 
 with col2:
    st.subheader("Kasus Positif Harian Covid di Indoneai")
-    image = Image.open("Positif.png")
+   image = Image.open("Positif.png")
    st.image(image, use_column_width='auto', caption ='Sumber : kawalcovid19.id')
 
 # Grafik korelasi
