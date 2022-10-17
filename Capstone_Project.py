@@ -25,6 +25,7 @@ df = pd.DataFrame([[13514963], [16106954], [4052923], [1557530], [202823]],
                     columns=['Jumlah Turis'])
 st.line_chart(data=df, use_container_width=True) 
 st.caption('Sumber : Badan Pusat Statistik')
+'''Menurut Badan Pusat Statistik, tingkat wisatawan mancanegara (wisman) yang datang ke Indonesia dari hingga tahun 2019 mengalami kenaikan sebanyak **2 juta** wisman, hal ini dapat dilihat pada grafik diatas. Namun saat tingkat wisman yang datang sedang tinggi, terjadi pandemi covid-19 di seluruh dunia termasuk Indonesia pada awal tahun 2020. Hal ini memberikan dampak negatif dengan menurun drastisnya wisman ke Indonesia mencapai **1000%** di tahun 2020.'''
 
 # Grafik jumlah turis pintu masuk dan covid harian
 st.subheader("Hubungan Jumlah Turis dengan Pandemi")
@@ -54,8 +55,6 @@ yang masuk ke Indonesia dari berbagai Pintu Masuk. Menjadi sangat sedikit ketika
 # Image / can change with interactive DB
 #image = Image.open("TurisTahun.png")
 #st.image(image, use_column_width='auto', caption = "Sumber : Badan Pusat Statistik")
-
-'''Menurut Badan Pusat Statistik, tingkat wisatawan mancanegara (wisman) yang datang ke Indonesia dari hingga tahun 2019 mengalami kenaikan sebanyak **2 juta** wisman, hal ini dapat dilihat pada grafik diatas. Namun saat tingkat wisman yang datang sedang tinggi, terjadi pandemi covid-19 di seluruh dunia termasuk Indonesia pada awal tahun 2020. Hal ini memberikan dampak negatif dengan menurun drastisnya wisman ke Indonesia mencapai **1000%** di tahun 2020.'''
 
 # CHart
 #df1= df.iloc[0:10]
