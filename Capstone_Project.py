@@ -95,3 +95,18 @@ mayoritas berasal dari benua Asia dan Australia yang jaraknya tidak jauh dari In
 
 [Statistika Non-Parametrik Analisis Jalur](https://slideplayer.info/slide/3099519)
 '''   
+
+def lapsed(x, today=meta["created"]):
+    t = pd.to_datetime(today)
+    return (t - x).days
+
+
+def year_fractional(dt):
+    frac = (dt - pd.Timestamp(year=dt.year, month=1, day=1)).days / 365
+    return dt.year + frac
+
+
+t = _df.copy()
+t["years"] = (t.modified - t.created).map(lambda x: x.days).divide(365).round(1)
+t["silent"] = t.modified.map(lambda x: lapsed(x))
+df = t.sort_values(["lang", "years"], ascending=[True, False])
