@@ -59,7 +59,7 @@ st.code(code, language = 'python')
 st.subheader("Kunjungan Turis berdasarkan Negara Asal")
 
 # Deklarasi dataset
-country = pd.read_excel('Data Turis per Country.xlsx', sheet_name='Sheet1')
+country = pd.read_csv('Data Turis per Country.csv')
 
 st.dataframe(country,use_container_width=False)
 # Data prep
