@@ -50,7 +50,7 @@ with col2:
 - H1 : Terdapat hubungan antara Jumlah Turis dengan Pandemi Covid
 '''
 
-code = '''**r = nΣxy–(Σx)(Σy) / √{nΣx²–(Σx)²}{nΣy² – (Σy)²}**'''
+code = '''r = nΣxy–(Σx)(Σy) / √{nΣx²–(Σx)²}{nΣy² – (Σy)²}'''
 st.code(code, language = 'python')
 
 '''Dari hasil korelasi diatas, didapatkan bahwa **r = -0,42** . Hal ini berarti kita dapat mereject **H0**. Dengan demikian Pandemi Covid **mempengaruhi secara signifikan** terhadap Jumlah Turis yang memasuki Indonesia.'''
@@ -66,7 +66,7 @@ st.code(code, language = 'python')
 #image = Image.open("TurisTahun.png")
 #st.image(image, use_column_width='auto', caption = "Sumber : Badan Pusat Statistik")
 
-# CHart
+# Chart
 #df1= df.iloc[0:10]
 #st.line_chart(data=df1, x = 'Ship Date', y = 'Profit', width=0, height=0, use_container_width=True)
 
