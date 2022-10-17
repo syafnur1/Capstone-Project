@@ -99,7 +99,7 @@ st.dataframe(country.style.highlight_max(axis=0),use_container_width=True)
 ## Contacts
 [![MAIL Badge](https://img.shields.io/badge/-z26syafnur@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:z26syafnur@gmail.com)](mailto:z26syafnur@gmail.com)
 
-[![LinkedIn Badge](https://www.linkedin.com/in/syafnur-zulfikri/)]
+[![LinkedIn](https://www.linkedin.com/in/syafnur-zulfikri/)]
 
 
 (C) Zulfikri Syafnur, 2022
