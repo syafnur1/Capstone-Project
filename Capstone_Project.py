@@ -50,9 +50,11 @@ with col2:
 - H1 : Terdapat hubungan antara Jumlah Turis dengan Pandemi Covid
 '''
 
-st.code(r = nΣxy – (Σx) (Σy) / √{nΣx² – (Σx)²} {nΣy2 – (Σy)2}, language = 'python')
+code = '''r = nΣxy–(Σx)(Σy) / √{nΣx²–(Σx)²}{nΣy² – (Σy)²}'''
+st.code(code, language = 'python')
 
-'''Dari hasil two tailed p_value, didapatkan bahwa p-value = 0 < alpha. Hal ini berarti kita dapat mereject H0. Dengan demikian Pandemi Covid berpengaruh signifikan terhadap Jumlah Turis yang memasuki Indonesia.'''
+'''Dari hasil korelasi diatas, didapatkan bahwa r = -0,42 . Hal ini berarti kita dapat mereject H0. Dengan demikian Jumlah Turis yang memasuki Indonesia berpengaruh negatif terhadap Pandemi Covid.'''
+
 # Deklarasi dataset
 #df1 = pd.read_excel('/content/Data Gabungan Turis.xlsx', sheet_name='Sheet2')
 
