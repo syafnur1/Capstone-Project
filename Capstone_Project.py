@@ -98,7 +98,7 @@ st.dataframe(country.style.highlight_max(axis=0),use_container_width=True)
 
 [![MAIL Badge](https://img.shields.io/badge/-z26syafnur@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:z26syafnur@gmail.com)](mailto:z26syafnur@gmail.com)
 
-
+## Contacts
 (C) Zulfikri Syafnur, 2022
 CP10-22
 '''
