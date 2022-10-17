@@ -50,7 +50,7 @@ with col2:
 - H1 : Terdapat hubungan antara Jumlah Turis dengan Pandemi Covid
 '''
 
-code = '''*r = nΣxy–(Σx)(Σy) / √{nΣx²–(Σx)²}{nΣy² – (Σy)²}*'''
+code = '''**r = nΣxy–(Σx)(Σy) / √{nΣx²–(Σx)²}{nΣy² – (Σy)²}**'''
 st.code(code, language = 'python')
 
 '''Dari hasil korelasi diatas, didapatkan bahwa **r = -0,42** . Hal ini berarti kita dapat mereject **H0**. Dengan demikian Pandemi Covid **mempengaruhi secara signifikan** terhadap Jumlah Turis yang memasuki Indonesia.'''
