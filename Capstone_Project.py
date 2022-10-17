@@ -1,4 +1,3 @@
-import plost
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -22,7 +21,10 @@ st.set_page_config(layout="wide")
 st.subheader("Jumlah Wisatawan Asing Masuk ke Indonesia")
 df = pd.DataFrame([[13514963], [16106954], [4052923], [1557530], [202823]],
                     index=['2018', '2019', '2020', '2021', '2022'],
-                    columns=['Jumlah Turis'])
+                    columns=['Jumlah Turis']
+                    x_annot={
+                    2020: "Jumlah Turis menurun drastis"}
+)
 st.line_chart(data=df, use_container_width=True)
 st.caption('Sumber : Badan Pusat Statistik')
 
