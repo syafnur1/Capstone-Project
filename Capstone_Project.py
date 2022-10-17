@@ -1,4 +1,3 @@
-pip install plost
 import plost
 import streamlit as st
 import pandas as pd
