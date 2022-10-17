@@ -96,17 +96,53 @@ mayoritas berasal dari benua Asia dan Australia yang jaraknya tidak jauh dari In
 [Statistika Non-Parametrik Analisis Jalur](https://slideplayer.info/slide/3099519)
 '''   
 
-def lapsed(x, today=meta["created"]):
-    t = pd.to_datetime(today)
-    return (t - x).days
+_df = get_data()
+st.subheader("Kunjungan Turis berdasarkan Negara Asal")
+all_langs = _df.lang.unique().tolist()
+
+@st.cache
+def palette(languages, default_color="#BEBEBE"):
+    r = requests.get(
+        "https://raw.githubusercontent.com/ozh/github-colors/master/colors.json"
+    ).json()
+    pal = {}
+    for lang in languages:
+        try:
+            pal[lang] = r[lang]["color"]
+        except KeyError:
+            pal[lang] = default_color
+    return list(pal.keys()), list(pal.values())
 
 
-def year_fractional(dt):
-    frac = (dt - pd.Timestamp(year=dt.year, month=1, day=1)).days / 365
-    return dt.year + frac
+col_keys, col_values = palette(all_langs)
+github_scale = alt.Scale(domain=col_keys, range=col_values)
 
+selected_langs = st.multiselect(
+    "Programming languages", options=all_langs, default=all_langs
+)
+plot_df = _df[_df.lang.isin(selected_langs)]
+plot_df["stars"] = plot_df.stars.divide(1000).round(1)
 
-t = _df.copy()
-t["years"] = (t.modified - t.created).map(lambda x: x.days).divide(365).round(1)
-t["silent"] = t.modified.map(lambda x: lapsed(x))
-df = t.sort_values(["lang", "years"], ascending=[True, False])
+# https://altair-viz.github.io/user_guide/customization.html#raw-color-values
+
+chart = (
+    alt.Chart(
+        plot_df,
+        title="Static site generators popularity",
+    )
+    .mark_bar()
+    .encode(
+        x=alt.X("stars", title="'000 stars on Github"),
+        y=alt.Y(
+            "name",
+            sort=alt.EncodingSortField(field="stars", order="descending"),
+            title="",
+        ),
+        color=alt.Color(
+            "lang",
+            legend=alt.Legend(title="Language"),
+            scale=github_scale,
+        ),
+        tooltip=["name", "stars", "lang"],
+    )
+)
