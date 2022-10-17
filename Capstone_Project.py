@@ -26,10 +26,10 @@ df = pd.DataFrame([[13514963], [16106954], [4052923], [1557530], [202823]],
 st.line_chart(data=df, use_container_width=True) 
 st.caption('Sumber : Badan Pusat Statistik')
 
-col1, col2 = st.columns(2)
-
+# Grafik jumlah turis pintu masuk dan covid harian
 st.subheader("Hubungan Jumlah Turis dengan Pandemi")
 
+col1, col2 = st.columns(2)
 with col1:
    st.header("Jumlah Turis per Pintu Masuk")
    st.image("https://static.streamlit.io/examples/cat.jpg")
@@ -38,6 +38,9 @@ with col2:
    st.header("Kasus Positif Harian Covid di Indoneai")
    st.image("https://static.streamlit.io/examples/dog.jpg")
 
+# Grafik korelasi
+''' Dari kedua grafik diatas dapat diambil kesimpulan bahwa kasus Covid-19 yang muncul di tahun 2020 mempengaruhi jumlah wisman 
+yang masuk ke Indonesia dari berbagai Pintu Masuk. Menjadi sangat sedikit ketika kasus positif harian mencapai puncaknya di tahun 2021. '''
 
 # Deklarasi dataset
 #df1 = pd.read_excel('/content/Data Gabungan Turis.xlsx', sheet_name='Sheet2')
@@ -58,12 +61,6 @@ with col2:
 
 #st.bar_chart(data=df1, x = 'Ship Date', y = 'Profit')
 
-''' ### Hubungan Jumlah Turis dengan Pandemi'''
-
-# Grafik jumlah turis pintu masuk dan covid harian
-# Grafik korelasi
-''' Dari kedua grafik diatas dapat diambil kesimpulan bahwa kasus Covid-19 yang muncul di tahun 2020 mempengaruhi jumlah wisman 
-yang masuk ke Indonesia dari berbagai Pintu Masuk. Menjadi sangat sedikit ketika kasus positif harian mencapai puncaknya di tahun 2021. '''
 
 # top 5 negara terbanyak ke indonesia
 
