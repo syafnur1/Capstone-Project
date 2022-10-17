@@ -61,7 +61,7 @@ st.subheader("Kunjungan Turis berdasarkan Negara Asal")
 # Deklarasi dataset
 country = pd.read_csv('Data Turis per Country.csv')
 
-st.dataframe(country,use_container_width=False)
+st.dataframe(country,use_container_width=True)
 # Data prep
 
 # End of Data Prep
