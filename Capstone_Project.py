@@ -8,7 +8,7 @@ image = Image.open("Barantum.png")
 st.image(image, use_column_width='auto', caption = "Sumber : barantum.com")
 
 '''
-    # Analisis Pemulihan sektor Pariwisata pasca Pandemi di Indonesia
+    # Analisis Pemulihan Sektor Pariwisata Pasca Pandemi di Indonesia
     Capstone Project with **streamlit** by Zulfikri Syafnur
     
     ---
@@ -25,7 +25,7 @@ df = pd.DataFrame([[13514963], [16106954], [4052923], [1557530], [202823]],
                     columns=['Jumlah Turis'])
 st.line_chart(data=df, use_container_width=True) 
 st.caption('Sumber : Badan Pusat Statistik')
-'''Menurut Badan Pusat Statistik, tingkat turis (wisatawan mancanegara) yang datang ke Indonesia dari hingga tahun 2019 mengalami kenaikan sebanyak **2 juta** turis, hal ini dapat dilihat pada grafik diatas. Namun saat tingkat turis yang datang sedang tinggi, terjadi pandemi covid-19 di seluruh dunia termasuk Indonesia pada awal tahun 2020 hingga sekarang. Hal ini memberikan dampak negatif dengan menurun drastisnya turis ke Indonesia mencapai **1000%** di tahun 2020.'''
+'''Menurut Badan Pusat Statistik, tingkat turis (wisatawan mancanegara) yang datang ke Indonesia hingga tahun 2019 mengalami kenaikan sebanyak **2 juta** turis, hal ini dapat dilihat pada grafik diatas. Namun saat tingkat turis yang datang sedang tinggi, terjadi pandemi covid-19 di seluruh dunia termasuk Indonesia pada awal tahun 2020 hingga sekarang. Hal ini memberikan dampak negatif dengan menurun drastisnya turis ke Indonesia mencapai **75 %** di tahun 2020.'''
 
 # Grafik jumlah turis pintu masuk dan covid harian
 st.subheader("Hubungan Jumlah Turis dengan Pandemi")
@@ -37,7 +37,7 @@ with col1:
    st.image(image, use_column_width='auto', caption ='Sumber : Badan Pusat Statistik')
 
 with col2:
-   st.subheader("Kasus Positif Harian Covid di Indoneai")
+   st.subheader("Kasus Positif Harian Covid di Indonesia")
    image = Image.open("Positif.png")
    st.image(image, use_column_width='auto', caption ='Sumber : kawalcovid19.id')
 
@@ -61,7 +61,7 @@ st.subheader("Kunjungan Turis berdasarkan Negara Asal")
 # Deklarasi dataset
 country = pd.read_csv('https://docs.google.com/spreadsheets/d/e/2PACX-1vTXspAWpKN-lhLVzwafiDNnwXAUf_l_I-xsdO3AVT0bDzTsgS5NyMnaOQRB865eBscEt9NKka4cJ-pw/pub?gid=0&single=true&output=csv')
 
-st.dataframe(country,use_container_width=True)
+st.dataframe(country,index=,use_container_width=True)
 # Data prep
 
 # End of Data Prep
@@ -94,4 +94,10 @@ st.dataframe(country,use_container_width=True)
 [barantum.com](https://www.barantum.com/blog/wp-content/uploads/2019/01/Wisata-Indonesia-Mempunyai-Peluang-Bisnis.jpg)
 
 [Statistika Non-Parametrik Analisis Jalur](https://slideplayer.info/slide/3099519)
+
+
+[![MAIL Badge](https://img.shields.io/badge/-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:z26syafnur@gmail.com)](mailto:z26syafnur@gmail.com)
+
+(C) Zulfikri Syafnur, 2022
+CP10-22
 '''
