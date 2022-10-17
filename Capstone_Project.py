@@ -32,13 +32,13 @@ st.subheader("Hubungan Jumlah Turis dengan Pandemi")
 col1, col2 = st.columns(2)
 with col1:
    st.subheader("Jumlah Turis per Pintu Masuk")
-    image1 = Image.open("Pinturis.png")
-   st.image(image1, use_column_width='auto', caption ='Sumber : Badan Pusat Statistik')
+    image = Image.open("Pinturis.png")
+   st.image(image, use_column_width='auto', caption ='Sumber : Badan Pusat Statistik')
 
 with col2:
    st.subheader("Kasus Positif Harian Covid di Indoneai")
-    image2 = Image.open("Positif.png")
-   st.image(image2, use_column_width='auto', caption ='Sumber : kawalcovid19.id')
+    image = Image.open("Positif.png")
+   st.image(image, use_column_width='auto', caption ='Sumber : kawalcovid19.id')
 
 # Grafik korelasi
 ''' Dari kedua grafik diatas dapat diambil kesimpulan bahwa kasus Covid-19 yang muncul di tahun 2020 mempengaruhi jumlah wisman 
