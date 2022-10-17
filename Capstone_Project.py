@@ -31,11 +31,11 @@ st.subheader("Hubungan Jumlah Turis dengan Pandemi")
 
 col1, col2 = st.columns(2)
 with col1:
-   st.header("Jumlah Turis per Pintu Masuk")
+   st.subheader("Jumlah Turis per Pintu Masuk")
    st.image("https://static.streamlit.io/examples/cat.jpg")
 
 with col2:
-   st.header("Kasus Positif Harian Covid di Indoneai")
+   st.subheader("Kasus Positif Harian Covid di Indoneai")
    st.image("https://static.streamlit.io/examples/dog.jpg")
 
 # Grafik korelasi
