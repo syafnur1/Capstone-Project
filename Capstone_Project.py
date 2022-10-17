@@ -134,25 +134,3 @@ plot_df = _df[_df.lang.isin(selected_langs)]
 plot_df["stars"] = plot_df.stars.divide(1000).round(1)
 
 # https://altair-viz.github.io/user_guide/customization.html#raw-color-values
-
-chart = (
-    alt.Chart(
-        plot_df,
-        title="Static site generators popularity",
-    )
-    .mark_bar()
-    .encode(
-        x=alt.X("stars", title="'000 stars on Github"),
-        y=alt.Y(
-            "name",
-            sort=alt.EncodingSortField(field="stars", order="descending"),
-            title="",
-        ),
-        color=alt.Color(
-            "lang",
-            legend=alt.Legend(title="Language"),
-            scale=github_scale,
-        ),
-        tooltip=["name", "stars", "lang"],
-    )
-)
