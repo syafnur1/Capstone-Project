@@ -2,8 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 from PIL import Image
-import altair as alt
-import requests
+import plotly.express as px
 
 st.set_page_config(layout="wide")
 image = Image.open("Barantum.png")
@@ -96,72 +95,3 @@ mayoritas berasal dari benua Asia dan Australia yang jaraknya tidak jauh dari In
 [barantum.com](https://www.barantum.com/blog/wp-content/uploads/2019/01/Wisata-Indonesia-Mempunyai-Peluang-Bisnis.jpg)
 
 [Statistika Non-Parametrik Analisis Jalur](https://slideplayer.info/slide/3099519)
-'''   
-
-url_csv = "https://raw.githubusercontent.com/epogrebnyak/ssg-dataset/main/data/ssg.csv"
-url_metadata = (
-    "https://raw.githubusercontent.com/epogrebnyak/ssg-dataset/main/data/metadata.json"
-)
-
-
-@st.cache
-def get_data():
-    return pd.read_csv(url_csv, parse_dates=["created", "modified"])
-
-@st.cache
-def get_meta():
-    return requests.get(url_metadata).json()
-
-_df = get_data()
-st.subheader("Kunjungan Turis berdasarkan Negara Asal")
-all_langs = _df.lang.unique().tolist()
-
-@st.cache
-def palette(languages, default_color="#BEBEBE"):
-    r = requests.get(
-        "https://raw.githubusercontent.com/ozh/github-colors/master/colors.json"
-    ).json()
-    pal = {}
-    for lang in languages:
-        try:
-            pal[lang] = r[lang]["color"]
-        except KeyError:
-            pal[lang] = default_color
-    return list(pal.keys()), list(pal.values())
-
-
-col_keys, col_values = palette(all_langs)
-github_scale = alt.Scale(domain=col_keys, range=col_values)
-
-selected_langs = st.multiselect(
-    "Programming languages", options=all_langs, default=all_langs
-)
-plot_df = _df[_df.lang.isin(selected_langs)]
-plot_df["stars"] = plot_df.stars.divide(1000).round(1)
-
-# https://altair-viz.github.io/user_guide/customization.html#raw-color-values
-
-chart = (
-    alt.Chart(
-        plot_df,
-        title="Static site generators popularity",
-    )
-    .mark_bar()
-    .encode(
-        x=alt.X("stars", title="'000 stars on Github"),
-        y=alt.Y(
-            "name",
-            sort=alt.EncodingSortField(field="stars", order="descending"),
-            title="",
-        ),
-        color=alt.Color(
-            "lang",
-            legend=alt.Legend(title="Language"),
-            scale=github_scale,
-        ),
-        tooltip=["name", "stars", "lang"],
-    )
-)
-
-
-st.altair_chart(chart, use_container_width=True)
