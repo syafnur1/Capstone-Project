@@ -96,6 +96,16 @@ mayoritas berasal dari benua Asia dan Australia yang jaraknya tidak jauh dari In
 [Statistika Non-Parametrik Analisis Jalur](https://slideplayer.info/slide/3099519)
 '''   
 
+url_csv = "https://raw.githubusercontent.com/epogrebnyak/ssg-dataset/main/data/ssg.csv"
+url_metadata = (
+    "https://raw.githubusercontent.com/epogrebnyak/ssg-dataset/main/data/metadata.json"
+)
+
+
+@st.cache
+def get_data():
+    return pd.read_csv(url_csv, parse_dates=["created", "modified"])
+
 _df = get_data()
 st.subheader("Kunjungan Turis berdasarkan Negara Asal")
 all_langs = _df.lang.unique().tolist()
