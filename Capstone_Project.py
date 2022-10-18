@@ -85,9 +85,12 @@ st.dataframe(country.style.highlight_max(axis=0),use_container_width=True)
 
 '''
 ## Penutup
-Kesimpulan dan saran yang dapat ditarik dari grafik-grafik diatas adalah sebagai berikut : 
+Kesimpulan dan saran yang dapat ditarik dari grafik-grafik diatas adalah sebagai berikut :
+
 •	Terdapat korelasi negatif antara Jumlah Turis yang masuk ke Indonesia dengan Pandemi Covid. Semakin tinggi Covid maka semakin rendah Turis yang masuk.
+
 •	Agar pariwisata dapat segera pulih di Indonesia, berdasarkan *Grafik : Jumlah Turis per Pintu Masuk* dapat dilihat bahwa pintu masuk via Udara adalah pintu masuk yang sangat sering digunakan Turis dibandingan via Darat dan via Laut, maka Pemerintah harus mempercepat membuka kembali penerbangan yang masuk ke Indonesia. 
+
 •	Kementrian Pariwisata juga harus memiliki inovasi-inovasi terbaik untuk mempromosikan Indonesia ke mancanegara agar Turis asing berminat untuk datang ke Indonesia.
 '''
 
