@@ -40,7 +40,7 @@ with pendahuluan:
     
     df = pd.DataFrame(data = d)
     # grafik 1
-    plost.line_chart(df, x='Tahun', y='Jumlah Turis', color='red', legend='bottom', 
+    plost.line_chart(df, x='Tahun', y='Jumlah_Turis', color='red', legend='bottom', 
                      pan_zoom='both', title='Jumlah Turis per Tahun',
                      x_annot={'2020': "Ini ketika Pandemi Covid melanda Indonesia"},
                     )
