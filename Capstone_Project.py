@@ -101,24 +101,24 @@ with negara:
     st.dataframe(country, use_container_width=True)
     
     top2018 = st.multiselect("Pilihan :", 
-                          options=country["2018].unique(),
-                          default=country["2018].unique()
+                          options=country["2018"].unique(),
+                          default=country["2018"].unique()
                          )
     top2019 = st.multiselect("Pilihan :", 
-                          options=country["2019].unique(),
-                          default=country["2019].unique()
+                          options=country["2019"].unique(),
+                          default=country["2019"].unique()
                          )
     top2020 = st.multiselect("Pilihan :", 
-                          options=country["2020].unique(),
-                          default=country["2020].unique()
+                          options=country["2020"].unique(),
+                          default=country["2020"].unique()
                          )
     top2021 = st.multiselect("Pilihan :", 
-                          options=country["2021].unique(),
-                          default=country["2021].unique()
+                          options=country["2021"].unique(),
+                          default=country["2021"].unique()
                          )
     top2022 = st.multiselect("Pilihan :", 
-                          options=country["2022].unique(),
-                          default=country["2022].unique()
+                          options=country["2022"].unique(),
+                          default=country["2022"].unique()
                          )
     country_selection = country.query(
       "2018 == @top2018 & 2019 == @top2019 & 2020 == @top2020 & 2021 == @top2021 & 2022 == @top2022"
