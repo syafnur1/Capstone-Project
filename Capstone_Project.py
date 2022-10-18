@@ -161,7 +161,7 @@ bottom: 0;
 width: 100%;
 background-color: none;
 color: #9EA25D;
-text-align: center;
+text-align: right;
 }
 </style>
 <div class="footer">
