@@ -40,10 +40,6 @@ with pendahuluan:
     
     df = pd.DataFrame(data = d)
     # grafik 1
-    plost.line_chart(df, x='Tahun', y='Jumlah_Turis', color='red', legend='bottom', 
-                     pan_zoom='both', title='Jumlah Turis per Tahun',
-                     x_annot={'2020': "Ini ketika Pandemi Covid melanda Indonesia"},
-                    )
     grafik_1 = px.line(df, x='Tahun', y='Jumlah_Turis',
                        markers=True, 
                        title='<b>Jumlah Turis per Tahun<b>',
@@ -188,4 +184,7 @@ st.markdown(footer,unsafe_allow_html=True)
 #st.line_chart(data=df1, x = 'Ship Date', y = 'Profit', width=0, height=0, use_container_width=True)
 
 #st.bar_chart(data=df1, x = 'Ship Date', y = 'Profit')
-#.style.highlight_max(axis=0)
+#plost.line_chart(df, x='Tahun', y='Jumlah_Turis', color='red', legend='bottom', 
+                     #pan_zoom='both', title='Jumlah Turis per Tahun',
+                     #x_annot={'2020': "Ini ketika Pandemi Covid melanda Indonesia"},
+                    #)
