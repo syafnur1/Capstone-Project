@@ -111,7 +111,7 @@ with negara:
     
 #     
   
-    st.markdown('''Dapat dilihat bahwa **Top 5** Turis yang banyak berkunjung ke Indonesia adalah negara-negara tetangga, dan mayoritas negara 
+    st.markdown('''Dapat dilihat bahwa Negara yang paling sering banyak berkunjung ke Indonesia adalah negara-negara tetangga, dan mayoritas negara 
                 tersebut berasal dari benua Asia yang jaraknya tidak jauh dari Indonesia.''')
 
 # Machine Learning + grafik
