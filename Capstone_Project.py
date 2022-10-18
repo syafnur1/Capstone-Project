@@ -90,7 +90,7 @@ with korelasi:
     df3 = pd.read_csv('https://docs.google.com/spreadsheets/d/e/2PACX-1vQY21pKyD2OqXjhrC2JpODETvSyfj8fS8dWE87smTC4JoxnJDZV_n7gcFtjHzYFpCZGtrfnfMl1CxVN/pub?gid=0&single=true&output=csv')
     df3 = df3.rename(columns = {'Harian': 'Positif per Bulan', 'Turis' : 'Jumlah Turis'})
 
-    col3, col4= st.columns([1.3,2.5])
+    col3, col4= st.columns([1.55,2.5])
 
     with col3:
         correlation_matrix = df3[['Positif per Bulan', 'Jumlah Turis']].corr()
@@ -109,6 +109,21 @@ with negara:
     
     st.dataframe(country.style.highlight_max(axis=0), use_container_width=True)
     
+    gra_country = px.bar(country,
+                         x='2018, 2019, 2020, 2021, 2022',
+                         y=Negara.index,
+                         orientation="h",
+                         title='<b>Jumlah Turis berdasarkan Negara<b>',
+                         template="plotly_white",
+    )
+    
+    gra_country.update_layout(
+      plot_bgcolor="white",
+      xaxis=(dict(showgrid=False)),
+      )
+    
+    st.plotly_chart(gra_country)
+#                         orientation="h"    
     st.markdown('''Dapat dilihat bahwa **Top 5** Turis yang banyak berkunjung ke Indonesia adalah negara-negara tetangga, dan mayoritas negara 
                 tersebut berasal dari benua Asia yang jaraknya tidak jauh dari Indonesia.''')
 
