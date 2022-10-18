@@ -34,7 +34,7 @@ d = {'Tahun': ['2018','2019', '2020', '2021', '2022'],
        'Jumlah Turis': [13514963, 16106954, 4052923, 1557530, 202823]}
 df = pd.DataFrame(data = d)
 
-plost.line_chart(df, x='Tahun', y='Jumlah Turis', color='company', legend='top', pan_zoom='pan', title='Jumlah Turis per Tahun',  x_annot={'2020': "Ini ketika Pandemi Covid melanda Indonesia"},)
+plost.line_chart(df, x='Tahun', y='Jumlah Turis', color='red', legend='bottom', pan_zoom='both', title='Jumlah Turis per Tahun',  x_annot={'2020': "Ini ketika Pandemi Covid melanda Indonesia"},)
 
 st.caption("""<a style='display: block; text-align: center;color: black;' 
 href="https://www.bps.go.id/indicator/16/1150/1/jumlah-kunjungan-wisatawan-mancanegara-per-bulan-ke-indonesia-menurut-pintu-masuk-2017---sekarang.html">
