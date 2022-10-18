@@ -22,7 +22,7 @@ with header:
     st.caption("""<a style='display: block; text-align: center;color: black;' 
                href="https://www.barantum.com/blog/wp-content/uploads/2019/01/Wisata-Indonesia-Mempunyai-Peluang-Bisnis.jpg)">Sumber: barantum.com</a>""", 
                unsafe_allow_html=True)
-    st.title('Analisis Pemulihan Sektor :airplane: Pariwisata Pasca Pandemi di Indonesia')
+    st.title('Analisis Pemulihan Sektor Pariwisata Pasca Pandemi di Indonesia')
     st.markdown('Capstone Project with **streamlit** by Zulfikri Syafnur')
     st.markdown('_________________')
 
@@ -98,7 +98,7 @@ with negara:
     country = pd.read_csv('https://docs.google.com/spreadsheets/d/e/2PACX-1vTXspAWpKN-lhLVzwafiDNnwXAUf_l_I-xsdO3AVT0bDzTsgS5NyMnaOQRB865eBscEt9NKka4cJ-pw/pub?gid=0&single=true&output=csv')
     
     country = country.drop(['Grand Total'], axis=1)
-    st.dataframe(country.style.highlight_max(axis=0), use_container_width=True)
+    st.dataframe(country, use_container_width=True)
     
     st.markdown('''Dapat dilihat bahwa **Top 5** Turis yang banyak berkunjung ke Indonesia adalah negara-negara tetangga, dan mayoritas negara 
                 tersebut berasal dari benua Asia yang jaraknya tidak jauh dari Indonesia.''')
@@ -180,3 +180,4 @@ st.markdown(footer,unsafe_allow_html=True)
 #st.line_chart(data=df1, x = 'Ship Date', y = 'Profit', width=0, height=0, use_container_width=True)
 
 #st.bar_chart(data=df1, x = 'Ship Date', y = 'Profit')
+#.style.highlight_max(axis=0)
