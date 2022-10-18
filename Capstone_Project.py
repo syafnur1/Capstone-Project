@@ -33,7 +33,13 @@ st.subheader("Jumlah Turis Asing Masuk ke Indonesia")
 df = pd.DataFrame([[13514963], [16106954], [4052923], [1557530], [202823]],
                     index=['2018', '2019', '2020', '2021', '2022'],
                     columns=['Jumlah Turis'])
-st.line_chart(data=df, use_container_width=True) 
+plost.area_chart(data=df, x='index', y='Jumlah Turis', 
+                 x_annot={
+                     '2020': "Ini ketika Pandemi Covid melanda Indonesia"},
+                )
+
+#st.line_chart(data = df, use_container_width=True)
+
 st.caption('Sumber : Badan Pusat Statistik')
 '''Menurut Badan Pusat Statistik, tingkat turis (wisatawan mancanegara) yang datang ke Indonesia hingga tahun 2019 mengalami kenaikan sebanyak **2 juta** turis, hal ini dapat dilihat pada grafik diatas. Namun saat tingkat turis yang datang sedang tinggi, terjadi pandemi covid-19 di seluruh dunia termasuk Indonesia pada awal tahun 2020 hingga sekarang. Hal ini memberikan dampak negatif dengan menurun drastisnya turis ke Indonesia mencapai **75 %** di tahun 2020.'''
 
