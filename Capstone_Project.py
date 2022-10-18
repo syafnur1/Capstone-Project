@@ -94,8 +94,9 @@ with negara:
     st.subheader("Kunjungan Turis berdasarkan Negara Asal")
     # Deklarasi dataset
     country = pd.read_csv('https://docs.google.com/spreadsheets/d/e/2PACX-1vTXspAWpKN-lhLVzwafiDNnwXAUf_l_I-xsdO3AVT0bDzTsgS5NyMnaOQRB865eBscEt9NKka4cJ-pw/pub?gid=0&single=true&output=csv')
-
-    st.dataframe(country['Negara'].style.highlight_max(axis=0), use_container_width=True)
+    
+    country = country.drop(['Grand Total'], axis=1)
+    st.dataframe(country.style.highlight_max(axis=0), use_container_width=True)
     
     st.markdown('''Dapat dilihat bahwa **Top 5** Turis yang banyak berkunjung ke Indonesia adalah negara-negara tetangga, dan mayoritas negara 
                 tersebut berasal dari benua Asia yang jaraknya tidak jauh dari Indonesia.''')
