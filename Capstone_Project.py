@@ -2,6 +2,15 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 from PIL import Image
+import lorem
+import altair as alt
+from vega_datasets import data
+import seaborn as sns
+import matplotlib.pyplot as plt
+import folium
+from streamlit_folium import st_folium
+import plotly.graph_objects as go
+import plotly.express as px
 
 st.set_page_config(layout="wide")
 image = Image.open("Barantum.png")
