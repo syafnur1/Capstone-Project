@@ -141,9 +141,32 @@ Kesimpulan dan saran yang dapat ditarik dari grafik-grafik diatas adalah sebagai
 [![MAIL Badge](https://img.shields.io/badge/-z26syafnur@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:z26syafnur@gmail.com)](mailto:z26syafnur@gmail.com)
 
 [![LinkedIn](https://img.shields.io/badge/syafnur-zulfikri-0077B5?style=for-the-badge&logo=linkedin&logoColor=white&link=https://www.linkedin.com/in/syafnur-zulfikri/)](https://www.linkedin.com/in/syafnur-zulfikri/)
-
-
-(C) Zulfikri Syafnur, 2022
-
-CP10-22
 '''
+
+"""<style>
+a:link , a:visited{
+color: #9EA25D;
+background-color: transparent;
+text-decoration: none;
+}
+a:hover,  a:active {
+color: black;
+background-color: transparent;
+text-decoration: none;
+}
+.footer {
+position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;
+background-color: #615DA2;
+color: #9EA25D;
+text-align: center;
+}
+</style>
+<div class="footer">
+<p>(C) Zulfikri Syafnur, 2022 
+CP10-22<a style='display: block; text-align: center;'</a></p>
+</div>
+"""
+st.markdown(footer,unsafe_allow_html=True)
