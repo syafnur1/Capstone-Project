@@ -45,6 +45,11 @@ with pendahuluan:
                        title='<b>Jumlah Turis per Tahun<b>',
                        template="plotly_white",
                      )
+    grafik_1.update_layout(legend=True,
+      plot_bgcolor="rgba(0,0,0,0)"
+      xaxis(dict(showgrid=False))
+      )
+    
     st.plotly_chart(grafik_1)      
       
     st.caption("""<a style='display: block; text-align: center;color: black;'
