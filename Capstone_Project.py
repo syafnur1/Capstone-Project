@@ -109,7 +109,12 @@ with negara:
     
     st.dataframe(country.style.highlight_max(axis=0), use_container_width=True)
     
-    negara = country.sort_values(by="2018", ascending=False).head(5)
+    option = st.selectbox(
+      'Tahun',
+      ('2018', '2019', '2020', '2021', 2022))
+    st.write('You selected:', option)
+    
+    negara_2018 = country.sort_values(by="2018", ascending=False).head(5)
     
     gra_country = px.bar(negara,
                          x="2018",
