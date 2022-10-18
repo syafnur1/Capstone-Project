@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import plost
+import plotly.express as px
 from PIL import Image
 
 st.set_page_config(page_title="Capstone Project",
@@ -35,7 +36,7 @@ with pendahuluan:
     st.subheader("Jumlah Turis Asing Masuk ke Indonesia")
     
     d = {'Tahun': ['2018','2019', '2020', '2021', '2022'],
-         'Jumlah Turis': [13514963, 16106954, 4052923, 1557530, 202823]}
+         'Jumlah_Turis': [13514963, 16106954, 4052923, 1557530, 202823]}
     
     df = pd.DataFrame(data = d)
     # grafik 1
@@ -43,6 +44,13 @@ with pendahuluan:
                      pan_zoom='both', title='Jumlah Turis per Tahun',
                      x_annot={'2020': "Ini ketika Pandemi Covid melanda Indonesia"},
                     )
+    grafik_1 = px.bar(df, x='Tahun', y=Jumlah_Turis.index,
+                      orientation="h", 
+                      title='<b>Jumlah Turis per Tahun<b>',
+                      template="plotly_white",
+                     )
+    st.plotly_chart(grafik_1)      
+      
     st.caption("""<a style='display: block; text-align: center;color: black;'
     href="https://www.bps.go.id/indicator/16/1150/1/jumlah-kunjungan-wisatawan-mancanegara-per-bulan-ke-indonesia-menurut-pintu-masuk-2017---sekarang.html">
     Sumber: Badan Pusat Statistik</a>""",unsafe_allow_html=True)
