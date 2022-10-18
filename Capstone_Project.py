@@ -33,7 +33,7 @@ st.subheader("Jumlah Turis Asing Masuk ke Indonesia")
 df = pd.DataFrame([[13514963], [16106954], [4052923], [1557530], [202823]],
                     index=['2018', '2019', '2020', '2021', '2022'],
                     columns=['Jumlah Turis'])
-plost.line_chart(data=df, x='index', y='Jumlah Turis',
+plost.line_chart(data=df,
                  x_annot={
                      '2020': "Ini ketika Pandemi Covid melanda Indonesia"},
                 )
