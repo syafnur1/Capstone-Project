@@ -79,7 +79,7 @@ with korelasi:
     df3 = pd.read_csv('https://docs.google.com/spreadsheets/d/e/2PACX-1vQY21pKyD2OqXjhrC2JpODETvSyfj8fS8dWE87smTC4JoxnJDZV_n7gcFtjHzYFpCZGtrfnfMl1CxVN/pub?gid=0&single=true&output=csv')
     df3 = df3.rename(columns = {'Harian': 'Positif per Bulan', 'Turis' : 'Jumlah Turis'})
 
-    col3, col4= st.columns([1.7,2.5])
+    col3, col4= st.columns([1.5,2.5])
 
     with col3:
         correlation_matrix = df3[['Positif per Bulan', 'Jumlah Turis']].corr()
@@ -90,21 +90,57 @@ with korelasi:
                     Dengan demikian Pandemi Covid **mempengaruhi secara signifikan** terhadap Jumlah Turis yang memasuki Indonesia.''')
 
 # Turis yang masuk per Negara Asal
-st.subheader("Kunjungan Turis berdasarkan Negara Asal")
+with negara:
+    st.subheader("Kunjungan Turis berdasarkan Negara Asal")
+    # Deklarasi dataset
+    country = pd.read_csv('https://docs.google.com/spreadsheets/d/e/2PACX-1vTXspAWpKN-lhLVzwafiDNnwXAUf_l_I-xsdO3AVT0bDzTsgS5NyMnaOQRB865eBscEt9NKka4cJ-pw/pub?gid=0&single=true&output=csv')
 
-# Deklarasi dataset
-country = pd.read_csv('https://docs.google.com/spreadsheets/d/e/2PACX-1vTXspAWpKN-lhLVzwafiDNnwXAUf_l_I-xsdO3AVT0bDzTsgS5NyMnaOQRB865eBscEt9NKka4cJ-pw/pub?gid=0&single=true&output=csv')
-
-st.dataframe(country.style.highlight_max(axis=0), use_container_width=True)
-
-# top 5 negara terbanyak ke indonesia
+    st.dataframe(country.style.highlight_max(axis=0), use_container_width=True)
+    st.markdown('''Dapat dilihat bahwa **Top 5** Turis yang banyak berkunjung ke Indonesia adalah negara-negara tetangga, dan mayoritas negara 
+                tersebut berasal dari benua Asia yang jaraknya tidak jauh dari Indonesia.''')
 
 ''' Dapat dilihat bahwa **Top 5** Turis yang banyak berkunjung ke Indonesia adalah negara-negara tetangga, dan mayoritas negara tersebut berasal dari benua Asia yang jaraknya tidak jauh dari Indonesia.'''
 
 # Machine Learning + grafik
 
-'''
-## Penutup
+with penutup:
+    st.subheader("Penutup")
+    st.markdown('''Kesimpulan dan saran yang dapat ditarik dari grafik-grafik diatas adalah sebagai berikut :
+                
+                - Terdapat korelasi negatif antara Jumlah Turis yang masuk ke Indonesia dengan Pandemi Covid. Semakin tinggi Covid maka semakin 
+                rendah Turis yang masuk.
+                
+                - Agar pariwisata dapat segera pulih di Indonesia, berdasarkan *Grafik : Jumlah Turis per Pintu Masuk* dapat dilihat bahwa pintu 
+                masuk via Udara adalah pintu masuk yang sangat sering digunakan Turis dibandingan via Darat dan via Laut, maka Pemerintah harus 
+                mempercepat membuka kembali penerbangan yang masuk ke Indonesia.
+                
+                - Kementrian Pariwisata juga harus memiliki inovasi-inovasi terbaik untuk mempromosikan Indonesia ke mancanegara agar Turis asing 
+                berminat untuk datang ke Indonesia.
+                ''')
+
+with pustaka:
+    st.subheader("Daftar Pustaka")
+    st.markdown('''
+                [BPS](https://www.bps.go.id/indicator/16/1150/1/jumlah-kunjungan-wisatawan-mancanegara-per-bulan-ke-indonesia-menurut-pintu-masuk-2017---sekarang.html)
+                
+                [Kawal Covid 19](https://docs.google.com/spreadsheets/d/1ma1T9hWbec1pXlwZ89WakRk-OfVUQZsOCFl4FwZxzVw/htmlview)
+                
+                [Model Decision Tree untuk Prediksi Jadwal Kerja menggunakan Scikit-Learn](https://jurnal.umj.ac.id/index.php/semnastek/article/view/5239/3517)
+
+                [barantum.com](https://www.barantum.com/blog/wp-content/uploads/2019/01/Wisata-Indonesia-Mempunyai-Peluang-Bisnis.jpg)
+
+                [Statistika Non-Parametrik Analisis Jalur](https://slideplayer.info/slide/3099519)
+                ''')
+
+with kontak:
+    st.subheader("Contacts")
+    st.markdown('''
+                [![MAIL Badge](https://img.shields.io/badge/-z26syafnur@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:z26syafnur@gmail.com)](mailto:z26syafnur@gmail.com)
+
+                [![LinkedIn](https://img.shields.io/badge/syafnur-zulfikri-0077B5?style=for-the-badge&logo=linkedin&logoColor=white&link=https://www.linkedin.com/in/syafnur-zulfikri/)](https://www.linkedin.com/in/syafnur-zulfikri/)
+                ''')
+    
+'''## Penutup
 Kesimpulan dan saran yang dapat ditarik dari grafik-grafik diatas adalah sebagai berikut :
 
 •	Terdapat korelasi negatif antara Jumlah Turis yang masuk ke Indonesia dengan Pandemi Covid. Semakin tinggi Covid maka semakin rendah Turis yang masuk.
