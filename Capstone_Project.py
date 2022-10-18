@@ -143,8 +143,10 @@ Kesimpulan dan saran yang dapat ditarik dari grafik-grafik diatas adalah sebagai
 [![LinkedIn](https://img.shields.io/badge/syafnur-zulfikri-0077B5?style=for-the-badge&logo=linkedin&logoColor=white&link=https://www.linkedin.com/in/syafnur-zulfikri/)](https://www.linkedin.com/in/syafnur-zulfikri/)
 '''
 
-footer = """<style> a:link , a:visited{color: #9EA25D;
-background-color: transparent; 
+footer="""<style>
+a:link , a:visited{
+color: #9EA25D;
+background-color: transparent;
 text-decoration: none;
 }
 a:hover,  a:active {
@@ -163,7 +165,7 @@ text-align: center;
 }
 </style>
 <div class="footer">
-<p>(C) Zulfikri Syafnur, 2022 - CP10-22<a style='display: block; text-align: center;'</a></p>
+<p>Developed by <a style='display: block; text-align: center;' href="https://ramadani.my.id/" target="_blank">Dicky Wahyu Ramadani</a></p>
 </div>
 """
-st.markdown(footer)
+st.markdown(footer,unsafe_allow_html=True)
