@@ -81,7 +81,7 @@ with korelasi:
     df3 = pd.read_csv('https://docs.google.com/spreadsheets/d/e/2PACX-1vQY21pKyD2OqXjhrC2JpODETvSyfj8fS8dWE87smTC4JoxnJDZV_n7gcFtjHzYFpCZGtrfnfMl1CxVN/pub?gid=0&single=true&output=csv')
     df3 = df3.rename(columns = {'Harian': 'Positif per Bulan', 'Turis' : 'Jumlah Turis'})
 
-    col3, col4= st.columns([1.5,2.5])
+    col3, col4= st.columns([1,2.5])
 
     with col3:
         correlation_matrix = df3[['Positif per Bulan', 'Jumlah Turis']].corr()
@@ -96,9 +96,17 @@ with negara:
     st.subheader("Kunjungan Turis berdasarkan Negara Asal")
     # Deklarasi dataset
     country = pd.read_csv('https://docs.google.com/spreadsheets/d/e/2PACX-1vTXspAWpKN-lhLVzwafiDNnwXAUf_l_I-xsdO3AVT0bDzTsgS5NyMnaOQRB865eBscEt9NKka4cJ-pw/pub?gid=0&single=true&output=csv')
-    
     country = country.drop(['Grand Total'], axis=1)
+    
     st.dataframe(country, use_container_width=True)
+    
+    top5 = st.multiselect("Pilihan :", 
+                          options=country.sort_values(by="2018", ascending=False)
+                          default=country)
+
+    country_selection = country.query(
+      "2018 == @2018
+    )
     
     st.markdown('''Dapat dilihat bahwa **Top 5** Turis yang banyak berkunjung ke Indonesia adalah negara-negara tetangga, dan mayoritas negara 
                 tersebut berasal dari benua Asia yang jaraknya tidak jauh dari Indonesia.''')
