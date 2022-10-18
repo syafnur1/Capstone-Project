@@ -18,9 +18,8 @@ with header:
     image = Image.open("Barantum.png")
     st.image(image, use_column_width='auto', caption = "Sumber : barantum.com")
     st.title('Analisis Pemulihan Sektor Pariwisata Pasca Pandemi di Indonesia')
-    st.text('''Capstone Project with **streamlit** by Zulfikri Syafnur
-    
-    ---
+    st.markdown('''Capstone Project with **streamlit** by Zulfikri Syafnur
+    _________________
     ''')
 
 '''
