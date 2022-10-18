@@ -1,21 +1,27 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-from PIL import Image
-import lorem
-import altair as alt
-from vega_datasets import data
-import seaborn as sns
-import matplotlib.pyplot as plt
-import folium
-from streamlit_folium import st_folium
-import plotly.graph_objects as go
-import plotly.express as px
 import plost
+from PIL import Image
 
 st.set_page_config(layout="wide")
-image = Image.open("Barantum.png")
-st.image(image, use_column_width='auto', caption = "Sumber : barantum.com")
+
+header = st.container()
+pendahuluan = st.container()
+korelasi = st.container()
+negara = st.container()
+penutup = st.container()
+pustaka = st.container()
+kontak = st.container()
+
+with header:
+    image = Image.open("Barantum.png")
+    st.image(image, use_column_width='auto', caption = "Sumber : barantum.com")
+    st.title('''# Analisis Pemulihan Sektor Pariwisata Pasca Pandemi di Indonesia
+    Capstone Project with **streamlit** by Zulfikri Syafnur
+    
+    ---
+    ''')
 
 '''
     # Analisis Pemulihan Sektor Pariwisata Pasca Pandemi di Indonesia
@@ -34,7 +40,11 @@ d = {'Tahun': ['2018','2019', '2020', '2021', '2022'],
        'Jumlah Turis': [13514963, 16106954, 4052923, 1557530, 202823]}
 df = pd.DataFrame(data = d)
 
-plost.line_chart(df, x='Tahun', y='Jumlah Turis', color='red', legend='bottom', pan_zoom='both', title='Jumlah Turis per Tahun',  x_annot={'2020': "Ini ketika Pandemi Covid melanda Indonesia"},)
+plost.line_chart(df, x='Tahun', y='Jumlah Turis', 
+                 color='red', legend='bottom', 
+                 pan_zoom='both', title='Jumlah Turis per Tahun',  
+                 x_annot={'2020': "Ini ketika Pandemi Covid melanda Indonesia"},
+                )
 
 st.caption("""<a style='display: block; text-align: center;color: black;' 
 href="https://www.bps.go.id/indicator/16/1150/1/jumlah-kunjungan-wisatawan-mancanegara-per-bulan-ke-indonesia-menurut-pintu-masuk-2017---sekarang.html">
