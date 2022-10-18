@@ -101,7 +101,7 @@ with negara:
     st.dataframe(country, use_container_width=True)
     
     top5 = st.multiselect("Pilihan :", 
-                          options=country.sort_values(by="2018", ascending=False)
+                          options=country.sort_values(by="2018", ascending=False),
                           default=country)
 
     country_selection = country.query(
