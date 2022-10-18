@@ -44,7 +44,7 @@ with pendahuluan:
                      pan_zoom='both', title='Jumlah Turis per Tahun',
                      x_annot={'2020': "Ini ketika Pandemi Covid melanda Indonesia"},
                     )
-    grafik_1 = px.bar(df, x='Tahun', y='Jumlah_Turis',
+    grafik_1 = px.bar(df, y='Tahun', x='Jumlah_Turis',
                       orientation="h", 
                       title='<b>Jumlah Turis per Tahun<b>',
                       template="plotly_white",
