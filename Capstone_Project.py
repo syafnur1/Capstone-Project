@@ -112,7 +112,7 @@ with negara:
     negara = country['Negara']
     
     gra_country = px.bar(country,
-                         x='2018, 2019, 2020, 2021, 2022',
+                         x="'2018', '2019', '2020', '2021', '2022'",
                          y=negara.index,
                          color="Negara",
                          title='<b>Jumlah Turis berdasarkan Negara<b>',
