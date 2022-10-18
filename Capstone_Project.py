@@ -48,7 +48,7 @@ with pendahuluan:
                        markers=True, 
                        title='<b>Jumlah Turis per Tahun<b>',
                        template="plotly_white",
-                       layout="wide"
+                       
                      )
     st.plotly_chart(grafik_1)      
       
