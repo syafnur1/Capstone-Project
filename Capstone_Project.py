@@ -161,11 +161,11 @@ bottom: 0;
 width: 100%;
 background-color: none;
 color: #9EA25D;
-text-align: right;
+text-align: left;
 }
 </style>
 <div class="footer">
-<p>(C) by Zulfikri Syafnur, 2022<a style='display: block; text-align: right;' href="" target="_blank">CP10-22</a></p>
+<p>(C) by Zulfikri Syafnur, 2022<a style='display: block; text-align: left;' href="" target="_blank">CP10-22</a></p>
 </div>
 """
 st.markdown(footer,unsafe_allow_html=True)
