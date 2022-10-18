@@ -109,28 +109,8 @@ with negara:
     
     st.dataframe(country.style.highlight_max(axis=0), use_container_width=True)
     
-    option = st.selectbox(
-      'Tahun',
-      ('2018', '2019', '2020', '2021', 2022))
-    st.write('You selected:', option)
-    
-    negara_2018 = country.sort_values(by="2018", ascending=False).head(5)
-    
-    gra_country = px.bar(negara_2018,
-                         orientation="h",
-                         x="2018",
-                         y="Negara",
-                         title='<b>Jumlah Turis berdasarkan Negara<b>',
-                         template="plotly_white",
-    )
-    
-    gra_country.update_layout(
-      plot_bgcolor="white",
-      xaxis=(dict(showgrid=False)),
-      )
-    
-    st.plotly_chart(gra_country)
-#                         orientation="h"    
+#     
+  
     st.markdown('''Dapat dilihat bahwa **Top 5** Turis yang banyak berkunjung ke Indonesia adalah negara-negara tetangga, dan mayoritas negara 
                 tersebut berasal dari benua Asia yang jaraknya tidak jauh dari Indonesia.''')
 
@@ -215,3 +195,24 @@ st.markdown(footer,unsafe_allow_html=True)
                      #pan_zoom='both', title='Jumlah Turis per Tahun',
                      #x_annot={'2020': "Ini ketika Pandemi Covid melanda Indonesia"},
                     #)
+#("""option = st.selectbox(
+#      'Tahun',
+#      ('2018', '2019', '2020', '2021', 2022))
+#    st.write('You selected:', option)
+    
+    #negara_2018 = country.sort_values(by="2018", ascending=False).head(5)
+   # 
+    #gra_country = px.bar(negara_2018,
+         #                orientation="h",
+        #                 x="2018",
+       #                  y="Negara",
+      #                   title='<b>Jumlah Turis berdasarkan Negara<b>',
+     #                    template="plotly_white",
+    #)
+    
+    #gra_country.update_layout(
+    #  plot_bgcolor="white",
+   #   xaxis=(dict(showgrid=False)),
+  #    )
+ #   
+#    st.plotly_chart(gra_country)""")
