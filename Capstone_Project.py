@@ -48,7 +48,7 @@ with pendahuluan:
                        markers=True, 
                        title='<b>Jumlah Turis per Tahun<b>',
                        template="plotly_white",
-                       color="firebrick",
+                       line=dict(color='firebrick', width=4),
                      )
     st.plotly_chart(grafik_1)      
       
