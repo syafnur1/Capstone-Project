@@ -47,7 +47,7 @@ with pendahuluan:
                      )
     grafik_1.update_layout(legend=True,
       plot_bgcolor="rgba(0,0,0,0)",
-      xaxis(dict(showgrid=False)
+      xaxis=(dict(showgrid=False)),
       )
     
     st.plotly_chart(grafik_1)      
