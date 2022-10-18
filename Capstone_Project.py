@@ -41,8 +41,10 @@ alt.mark_line(stroke='#5276A7', interpolate='monotone', point=alt.OverlayMarkDef
     scale=alt.Scale(domain=[0, 20]))
 #st.line_chart(data = df, interpolate='monotone', use_container_width=True)
 
-#st.caption('Sumber : Badan Pusat Statistik')
-#'''Menurut Badan Pusat Statistik, tingkat turis (wisatawan mancanegara) yang datang ke Indonesia hingga tahun 2019 mengalami kenaikan sebanyak **2 juta** turis, hal ini dapat dilihat pada grafik diatas. Namun saat tingkat turis yang datang sedang tinggi, terjadi pandemi covid-19 di seluruh dunia termasuk Indonesia pada awal tahun 2020 hingga sekarang. Hal ini memberikan dampak negatif dengan menurun drastisnya turis ke Indonesia mencapai **75 %** di tahun 2020.'''
+
+st.caption('Sumber : Badan Pusat Statistik')
+
+'''Menurut Badan Pusat Statistik, tingkat turis (wisatawan mancanegara) yang datang ke Indonesia hingga tahun 2019 mengalami kenaikan sebanyak **2 juta** turis, hal ini dapat dilihat pada grafik diatas. Namun saat tingkat turis yang datang sedang tinggi, terjadi pandemi covid-19 di seluruh dunia termasuk Indonesia pada awal tahun 2020 hingga sekarang. Hal ini memberikan dampak negatif dengan menurun drastisnya turis ke Indonesia mencapai **75 %** di tahun 2020.'''
 
 # Grafik jumlah turis pintu masuk dan covid harian
 st.subheader("Hubungan Jumlah Turis dengan Pandemi")
