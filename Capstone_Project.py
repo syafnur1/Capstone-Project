@@ -4,8 +4,9 @@ import numpy as np
 import plost
 from PIL import Image
 
-st.set_page_config(layout="wide",
-                  page_icon=":airplane:")
+st.set_page_config(page_title="Capstone Project",
+                   page_icon=":airplane:",
+                   layout="wide")
 
 header = st.container()
 pendahuluan = st.container()
