@@ -109,7 +109,7 @@ with negara:
     
     st.dataframe(country.style.highlight_max(axis=0), use_container_width=True)
     
-    negara = country.sort_values(by="2018", ascending=False).head(3)
+    negara = country.sort_values(by="2018", ascending=False).head(5)
     
     gra_country = px.bar(negara,
                          x="2018",
