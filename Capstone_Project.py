@@ -109,9 +109,11 @@ with negara:
     
     st.dataframe(country.style.highlight_max(axis=0), use_container_width=True)
     
+    negara = country['Negara'].unique()
+    
     gra_country = px.bar(country,
                          x='2018, 2019, 2020, 2021, 2022',
-                         y=Negara.index,
+                         y=negara.index,
                          orientation="h",
                          title='<b>Jumlah Turis berdasarkan Negara<b>',
                          template="plotly_white",
