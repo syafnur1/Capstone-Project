@@ -104,9 +104,9 @@ with negara:
                           options=country.sort_values(by="2018", ascending=False),
                           default=country)
 
-    country_selection = country.query(
-      "2018 == @2018
-    )
+    #country_selection = country.query(
+     # "2018 == @2018
+    #)
     
     st.markdown('''Dapat dilihat bahwa **Top 5** Turis yang banyak berkunjung ke Indonesia adalah negara-negara tetangga, dan mayoritas negara 
                 tersebut berasal dari benua Asia yang jaraknya tidak jauh dari Indonesia.''')
