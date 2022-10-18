@@ -168,4 +168,4 @@ text-align: center;
 <p>(C) by Zulfikri Syafnur, 2022<a style='display: block; text-align: center;' href="" target="_blank">CP10-22</a></p>
 </div>
 """
-st.markdown(footer,unsafe_allow_html=True)
+st.markdown(footer,unsafe_allow_html=False)
