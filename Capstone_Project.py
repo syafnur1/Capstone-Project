@@ -11,6 +11,7 @@ import folium
 from streamlit_folium import st_folium
 import plotly.graph_objects as go
 import plotly.express as px
+import plost
 
 st.set_page_config(layout="wide")
 image = Image.open("Barantum.png")
