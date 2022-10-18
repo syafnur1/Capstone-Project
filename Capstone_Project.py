@@ -44,11 +44,11 @@ with pendahuluan:
                      pan_zoom='both', title='Jumlah Turis per Tahun',
                      x_annot={'2020': "Ini ketika Pandemi Covid melanda Indonesia"},
                     )
-    grafik_1 = px.line(df, y='Tahun', x='Jumlah_Turis',
+    grafik_1 = px.line(df, x='Tahun', y='Jumlah_Turis',
                        markers=True, 
                        title='<b>Jumlah Turis per Tahun<b>',
                        template="plotly_white",
-                       
+                       color="firebrick",
                      )
     st.plotly_chart(grafik_1)      
       
