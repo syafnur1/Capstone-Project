@@ -61,8 +61,8 @@ with col2:
 
 
 ''' Dari kedua grafik diatas dapat diambil kesimpulan bahwa kasus Covid-19 yang muncul di tahun 2020 mempengaruhi jumlah turis yang masuk ke Indonesia dari berbagai Pintu Masuk. Sehingga menjadi sangat sedikit turis yang masuk ketika kasus positif harian mencapai puncaknya di tahun 2021.'''
+
 # korelasi
-col3, col4= st.columns([1,2.5])
 ''' **Apakah terdapat hubungan antara Jumlah Turis dengan Pandemi Covid?**
 
 - H0 : Tidak terdapat hubungan antara Jumlah Turis dengan Pandemi Covid
@@ -75,12 +75,14 @@ st.code(code, language = 'python')
 
 df3 = pd.read_csv('https://docs.google.com/spreadsheets/d/e/2PACX-1vQY21pKyD2OqXjhrC2JpODETvSyfj8fS8dWE87smTC4JoxnJDZV_n7gcFtjHzYFpCZGtrfnfMl1CxVN/pub?gid=0&single=true&output=csv')
 
+col3, col4= st.columns([1,2.5])
+
 with col3:
     correlation_matrix = df3[['Harian', 'Turis']].corr()
     correlation_matrix 
 
 with col4:
-    st.write('''Dari hasil korelasi diatas, didapatkan bahwa **r = -0,42** . Hal ini berarti kita dapat mereject **H0**. Dengan demikian Pandemi Covid **mempengaruhi secara signifikan** terhadap Jumlah Turis yang memasuki Indonesia.''')
+    st.write('''Dari hasil korelasi dua data diatas, didapatkan bahwa **r = -0,42** . Hal ini berarti kita dapat mereject **H0**. Dengan demikian Pandemi Covid **mempengaruhi secara signifikan** terhadap Jumlah Turis yang memasuki Indonesia.''')
 
 # Turis yang masuk per Negara Asal
 st.subheader("Kunjungan Turis berdasarkan Negara Asal")
