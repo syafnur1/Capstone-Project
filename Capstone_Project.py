@@ -22,7 +22,7 @@ with header:
     st.caption("""<a style='display: block; text-align: center;color: black;' 
                href="https://www.barantum.com/blog/wp-content/uploads/2019/01/Wisata-Indonesia-Mempunyai-Peluang-Bisnis.jpg)">Sumber: barantum.com</a>""", 
                unsafe_allow_html=True)
-    st.title('Analisis Pemulihan Sektor Pariwisata Pasca Pandemi di Indonesia')
+    st.title('Analisis Pemulihan Sektor :airplane: Pariwisata Pasca Pandemi di Indonesia')
     st.markdown('Capstone Project with **streamlit** by Zulfikri Syafnur')
     st.markdown('_________________')
 
