@@ -54,7 +54,7 @@ with col1:
    st.subheader("Jumlah Turis per Pintu Masuk")
    image = Image.open("Pinturis.png")
    st.image(image, use_column_width='auto')
-   st.caption("Sumber: [Badan Pusat Statistik](https://www.bps.go.id/indicator/16/1150/1/jumlah-kunjungan-wisatawan-mancanegara-per-bulan-ke-indonesia-menurut-pintu-masuk-2017---sekarang.html)"
+   st.caption("Sumber: [Badan Pusat Statistik](https://www.bps.go.id/indicator/16/1150/1/jumlah-kunjungan-wisatawan-mancanegara-per-bulan-ke-indonesia-menurut-pintu-masuk-2017---sekarang.html")
  
 with col2:
    st.subheader("Kasus Positif Harian Covid di Indonesia")
