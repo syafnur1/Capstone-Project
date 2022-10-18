@@ -34,11 +34,7 @@ d = {'Tahun': ['2018','2019', '2020', '2021', '2022'],
        'Jumlah Turis': [13514963, 16106954, 4052923, 1557530, 202823]}
 df = pd.DataFrame(data = d)
 
-plost.line_chart(df, x='Tahun', y='Jumlah Turis', color='red', legend='top', pan_zoom='both', title='Jumlah Turis per Tahun', x_annot={'2020': "Ini ketika Pandemi Covid melanda Indonesia"},)
-#base = alt.Chart(df, title="Jumlah Turis Asing Masuk ke Indonesia", height=300, width=700).encode(alt.X('Tahun', axis=alt.Axis(title='Tahun'))
-#line = base.mark_line(stroke='#5276A7', interpolate='monotone', point=alt.OverlayMarkDef(color="blue")).encode(x = 'Tahun', y = alt.Y('Jumlah Turis', axis=alt.Axis(title='Jumlah Turis (Juta)', titleColor='#5276A7'),scale=alt.Scale(domain=[0, 20]))
-#pb = alt.layer(line).resolve_scale( y = 'independent')
-#st.line_chart(data = df, use_container_width=True)
+plost.line_chart(df, x='Tahun', y='Jumlah Turis', color='company', legend='top', pan_zoom='both', title='Jumlah Turis per Tahun', pan_zoom='minimap', x_annot={'2020': "Ini ketika Pandemi Covid melanda Indonesia"},)
 
 st.caption("""<a style='display: block; text-align: center;color: black;' 
 href="https://www.bps.go.id/indicator/16/1150/1/jumlah-kunjungan-wisatawan-mancanegara-per-bulan-ke-indonesia-menurut-pintu-masuk-2017---sekarang.html">
