@@ -109,7 +109,9 @@ with negara:
     
     st.dataframe(country.style.highlight_max(axis=0), use_container_width=True)
     
-    gra_country = px.bar(country,
+    negara = country.sort_values(by="2018", ascending=False).head(3)
+    
+    gra_country = px.bar(negara,
                          x="2018",
                          y="Negara",
                          title='<b>Jumlah Turis berdasarkan Negara<b>',
