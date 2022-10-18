@@ -114,7 +114,7 @@ with negara:
     gra_country = px.bar(country,
                          x='2018, 2019, 2020, 2021, 2022',
                          y=negara.index,
-                         color="Negara"
+                         color="Negara",
                          title='<b>Jumlah Turis berdasarkan Negara<b>',
                          template="plotly_white",
     )
