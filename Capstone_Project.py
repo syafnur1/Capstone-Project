@@ -99,8 +99,6 @@ with negara:
     st.markdown('''Dapat dilihat bahwa **Top 5** Turis yang banyak berkunjung ke Indonesia adalah negara-negara tetangga, dan mayoritas negara 
                 tersebut berasal dari benua Asia yang jaraknya tidak jauh dari Indonesia.''')
 
-''' Dapat dilihat bahwa **Top 5** Turis yang banyak berkunjung ke Indonesia adalah negara-negara tetangga, dan mayoritas negara tersebut berasal dari benua Asia yang jaraknya tidak jauh dari Indonesia.'''
-
 # Machine Learning + grafik
 
 with penutup:
@@ -136,34 +134,6 @@ with kontak:
                 [![LinkedIn](https://img.shields.io/badge/syafnur-zulfikri-0077B5?style=for-the-badge&logo=linkedin&logoColor=white&link=https://www.linkedin.com/in/syafnur-zulfikri/)](https://www.linkedin.com/in/syafnur-zulfikri/)
                 ''')
     
-'''## Penutup
-Kesimpulan dan saran yang dapat ditarik dari grafik-grafik diatas adalah sebagai berikut :
-
-•	Terdapat korelasi negatif antara Jumlah Turis yang masuk ke Indonesia dengan Pandemi Covid. Semakin tinggi Covid maka semakin rendah Turis yang masuk.
-
-•	Agar pariwisata dapat segera pulih di Indonesia, berdasarkan *Grafik : Jumlah Turis per Pintu Masuk* dapat dilihat bahwa pintu masuk via Udara adalah pintu masuk yang sangat sering digunakan Turis dibandingan via Darat dan via Laut, maka Pemerintah harus mempercepat membuka kembali penerbangan yang masuk ke Indonesia. 
-
-•	Kementrian Pariwisata juga harus memiliki inovasi-inovasi terbaik untuk mempromosikan Indonesia ke mancanegara agar Turis asing berminat untuk datang ke Indonesia.
-'''
-
-'''
-## Daftar Pustaka
-[BPS](https://www.bps.go.id/indicator/16/1150/1/jumlah-kunjungan-wisatawan-mancanegara-per-bulan-ke-indonesia-menurut-pintu-masuk-2017---sekarang.html)
-
-[Kawal Covid 19](https://docs.google.com/spreadsheets/d/1ma1T9hWbec1pXlwZ89WakRk-OfVUQZsOCFl4FwZxzVw/htmlview)
-
-[Model Decision Tree untuk Prediksi Jadwal Kerja menggunakan Scikit-Learn](https://jurnal.umj.ac.id/index.php/semnastek/article/view/5239/3517)
-
-[barantum.com](https://www.barantum.com/blog/wp-content/uploads/2019/01/Wisata-Indonesia-Mempunyai-Peluang-Bisnis.jpg)
-
-[Statistika Non-Parametrik Analisis Jalur](https://slideplayer.info/slide/3099519)
-
-
-## Contacts
-[![MAIL Badge](https://img.shields.io/badge/-z26syafnur@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:z26syafnur@gmail.com)](mailto:z26syafnur@gmail.com)
-
-[![LinkedIn](https://img.shields.io/badge/syafnur-zulfikri-0077B5?style=for-the-badge&logo=linkedin&logoColor=white&link=https://www.linkedin.com/in/syafnur-zulfikri/)](https://www.linkedin.com/in/syafnur-zulfikri/)
-'''
 #9EA25D:y, #615DA2:b
 footer="""<style>
 a:link , a:visited{
