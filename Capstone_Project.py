@@ -165,7 +165,7 @@ text-align: center;
 }
 </style>
 <div class="footer">
-<p>Developed by <a style='display: block; text-align: center;' href="https://ramadani.my.id/" target="_blank">Dicky Wahyu Ramadani</a></p>
+<p>(C) by <a style='display: block; text-align: center;' href="https://www.linkedin.com/in/syafnur-zulfikri/" target="_blank">Zulfikri Syafnur, 2022 - CP10-22</a></p>
 </div>
 """
 st.markdown(footer,unsafe_allow_html=True)
