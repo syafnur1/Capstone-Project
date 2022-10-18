@@ -30,11 +30,14 @@ st.image(image, use_column_width='auto', caption = "Sumber : barantum.com")
 '''
 
 st.subheader("Jumlah Turis Asing Masuk ke Indonesia")
-df = pd.DataFrame([[13514963], [16106954], [4052923], [1557530], [202823]],
-                    index=['2018', '2019', '2020', '2021', '2022'],
-                    columns=['Jumlah Turis'])
+d = {'Tahun': ['2018','2019', '2020', '2021', '2022'], 
+       'Jumlah Turis': [13514963, 16106954, 4052923, 1557530, 202823]}
+df = pd.DataFrame(data = d)
+
+df['Tahun']=pd.to_datetime(df['Tahun'], format='%Y')
+
 #plost.line_chart(data=df['Jumlah Turis'], x='index', y='Jumlah Turis', x_annot={'2020': "Ini ketika Pandemi Covid melanda Indonesia"},)
-#line1 = alt.mark_line(stroke='#5276A7', interpolate='monotone', point=alt.OverlayMarkDef(color="blue")).encode(x = 'index', y = alt.Y('Jumlah Turis', axis=alt.Axis(title='Jumlah Turis (Juta)', titleColor='#5276A7'),scale=alt.Scale(domain=[0, 20]))
+line1 = alt.mark_line(stroke='#5276A7', interpolate='monotone', point=alt.OverlayMarkDef(color="blue")).encode(x = 'Tahun', y = alt.Y('Jumlah Turis', axis=alt.Axis(title='Jumlah Turis (Juta)', titleColor='#5276A7'),scale=alt.Scale(domain=[0, 20]))
 #st.line_chart(data = df, interpolate='monotone', use_container_width=True)
 
 
