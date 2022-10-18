@@ -70,8 +70,8 @@ with korelasi:
 
     # korelasi
     st.markdown('**Apakah terdapat hubungan antara Jumlah Turis dengan Pandemi Covid?**')
-    > - H0 : Tidak terdapat hubungan antara Jumlah Turis dengan Pandemi Covid
-    > - H1 : Terdapat hubungan antara Jumlah Turis dengan Pandemi Covid
+    st.markdown('> - H0 : Tidak terdapat hubungan antara Jumlah Turis dengan Pandemi Covid')
+    st.markdown('> - H1 : Terdapat hubungan antara Jumlah Turis dengan Pandemi Covid')
 
     code = '''r = nΣxy–(Σx)(Σy) / √{nΣx²–(Σx)²}{nΣy² – (Σy)²}'''
     st.code(code, language = 'python')
@@ -96,26 +96,12 @@ st.subheader("Kunjungan Turis berdasarkan Negara Asal")
 country = pd.read_csv('https://docs.google.com/spreadsheets/d/e/2PACX-1vTXspAWpKN-lhLVzwafiDNnwXAUf_l_I-xsdO3AVT0bDzTsgS5NyMnaOQRB865eBscEt9NKka4cJ-pw/pub?gid=0&single=true&output=csv')
 
 st.dataframe(country.style.highlight_max(axis=0), use_container_width=True)
-# Data prep
-
-# End of Data Prep
-
-# Image / can change with interactive DB
-#image = Image.open("TurisTahun.png")
-#st.image(image, use_column_width='auto', caption = "Sumber : Badan Pusat Statistik")
-
-# Chart
-#df1= df.iloc[0:10]
-#st.line_chart(data=df1, x = 'Ship Date', y = 'Profit', width=0, height=0, use_container_width=True)
-
-#st.bar_chart(data=df1, x = 'Ship Date', y = 'Profit')
-
 
 # top 5 negara terbanyak ke indonesia
 
 ''' Dapat dilihat bahwa **Top 5** Turis yang banyak berkunjung ke Indonesia adalah negara-negara tetangga, dan mayoritas negara tersebut berasal dari benua Asia yang jaraknya tidak jauh dari Indonesia.'''
 
-# Machine Learning + grafiknya
+# Machine Learning + grafik
 
 '''
 ## Penutup
@@ -173,3 +159,18 @@ text-align: left;
 </div>
 """
 st.markdown(footer,unsafe_allow_html=True)
+
+
+# Data prep
+
+# End of Data Prep
+
+# Image / can change with interactive DB
+#image = Image.open("TurisTahun.png")
+#st.image(image, use_column_width='auto', caption = "Sumber : Badan Pusat Statistik")
+
+# Chart
+#df1= df.iloc[0:10]
+#st.line_chart(data=df1, x = 'Ship Date', y = 'Profit', width=0, height=0, use_container_width=True)
+
+#st.bar_chart(data=df1, x = 'Ship Date', y = 'Profit')
