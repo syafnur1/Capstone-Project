@@ -8,7 +8,7 @@ st.set_page_config(layout="wide")
 
 header = st.container()
 pendahuluan = st.container()
-korelasi = st.beta_container()
+korelasi = st.container()
 negara = st.container()
 penutup = st.container()
 pustaka = st.container()
@@ -52,22 +52,21 @@ with pendahuluan:
 # Grafik jumlah turis pintu masuk dan covid harian
 with korelasi:
     st.subheader("Hubungan Jumlah Turis dengan Pandemi")
-
-st.subheader("Hubungan Jumlah Turis dengan Pandemi")
-col1, col2 = st.columns(2)
-with col1:
-   st.subheader("Jumlah Turis per Pintu Masuk")
-   image = Image.open("Pinturis.png")
-   st.image(image, use_column_width='auto')
-   st.caption("""<a style='display: block; text-align: center;color: black;' href="https://www.bps.go.id/indicator/16/1150/1/jumlah-kunjungan-wisatawan-mancanegara-per-bulan-ke-indonesia-menurut-pintu-masuk-2017---sekarang.html">Sumber: Badan Pusat Statistik</a>""",unsafe_allow_html=True)
-
- 
-with col2:
-   st.subheader("Kasus Positif Harian Covid di Indonesia")
-   image = Image.open("Positif.png")
-   st.image(image, use_column_width='auto')
-   st.caption("""<a style='display: block; text-align: center;color: black;' href="https://docs.google.com/spreadsheets/d/1ma1T9hWbec1pXlwZ89WakRk-OfVUQZsOCFl4FwZxzVw/htmlview">Sumber: Kawal Covid 19</a>""",unsafe_allow_html=True)
-
+    
+    col1, col2 = st.columns(2)
+    with col1:
+        st.subheader("Jumlah Turis per Pintu Masuk")
+        image = Image.open("Pinturis.png")
+        st.image(image, use_column_width='auto')
+        st.caption("""<a style='display: block; text-align: center;color: black;' href="https://www.bps.go.id/indicator/16/1150/1/jumlah-kunjungan-wisatawan-mancanegara-per-bulan-ke-indonesia-menurut-pintu-masuk-2017---sekarang.html">Sumber: Badan Pusat Statistik</a>""",unsafe_allow_html=True)
+    with col2:
+        st.subheader("Kasus Positif Harian Covid di Indonesia")
+        image = Image.open("Positif.png")
+        st.image(image, use_column_width='auto')
+        st.caption("""<a style='display: block; text-align: center;color: black;' href="https://docs.google.com/spreadsheets/d/1ma1T9hWbec1pXlwZ89WakRk-OfVUQZsOCFl4FwZxzVw/htmlview">Sumber: Kawal Covid 19</a>""",unsafe_allow_html=True)
+    st.markdown('''Dari kedua grafik diatas dapat diambil kesimpulan bahwa kasus Covid-19 yang muncul di tahun 2020 mempengaruhi jumlah turis yang 
+                masuk ke Indonesia dari berbagai Pintu Masuk. Sehingga menjadi sangat sedikit turis yang masuk ketika kasus positif harian mencapai 
+                puncaknya di tahun 2021.''')
 
 ''' Dari kedua grafik diatas dapat diambil kesimpulan bahwa kasus Covid-19 yang muncul di tahun 2020 mempengaruhi jumlah turis yang masuk ke Indonesia dari berbagai Pintu Masuk. Sehingga menjadi sangat sedikit turis yang masuk ketika kasus positif harian mencapai puncaknya di tahun 2021.'''
 
