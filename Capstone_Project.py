@@ -159,7 +159,7 @@ position: fixed;
 left: 0;
 bottom: 0;
 width: 100%;
-background-color: #615DA2;
+background-color: none;
 color: #9EA25D;
 text-align: center;
 }
