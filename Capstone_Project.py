@@ -102,7 +102,8 @@ with negara:
     
     top5 = st.multiselect("Pilihan :", 
                           options=country.sort_values(by="2018", ascending=False),
-                          default=country)
+                          default=country.sort_values()
+                         )
 
     #country_selection = country.query(
      # "2018 == @2018
