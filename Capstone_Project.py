@@ -142,7 +142,7 @@ Kesimpulan dan saran yang dapat ditarik dari grafik-grafik diatas adalah sebagai
 
 [![LinkedIn](https://img.shields.io/badge/syafnur-zulfikri-0077B5?style=for-the-badge&logo=linkedin&logoColor=white&link=https://www.linkedin.com/in/syafnur-zulfikri/)](https://www.linkedin.com/in/syafnur-zulfikri/)
 '''
-#9EA25D
+#9EA25D:y, #615DA2:b
 footer="""<style>
 a:link , a:visited{
 color: "green";
@@ -159,7 +159,7 @@ position: fixed;
 left: 0;
 bottom: 0;
 width: 100%;
-background-color: #615DA2;
+background-color: "blue";
 color: #9EA25D;
 text-align: center;
 }
