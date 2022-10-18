@@ -116,7 +116,7 @@ with negara:
     
     negara_2018 = country.sort_values(by="2018", ascending=False).head(5)
     
-    gra_country = px.bar(negara,
+    gra_country = px.bar(negara_2018,
                          x="2018",
                          y="Negara",
                          title='<b>Jumlah Turis berdasarkan Negara<b>',
