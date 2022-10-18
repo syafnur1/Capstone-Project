@@ -60,7 +60,9 @@ with col1:
 with col2:
    st.subheader("Kasus Positif Harian Covid di Indonesia")
    image = Image.open("Positif.png")
-   st.image(image, use_column_width='auto', caption ='Sumber : kawalcovid19.id')
+   st.image(image, use_column_width='auto')
+   st.caption("""<a style='display: block; text-align: center;color: black;' href="https://docs.google.com/spreadsheets/d/1ma1T9hWbec1pXlwZ89WakRk-OfVUQZsOCFl4FwZxzVw/htmlview">Sumber: Kawal Covid 19</a>""",unsafe_allow_html=True)
+
 
 ''' Dari kedua grafik diatas dapat diambil kesimpulan bahwa kasus Covid-19 yang muncul di tahun 2020 mempengaruhi jumlah turis yang masuk ke Indonesia dari berbagai Pintu Masuk. Sehingga menjadi sangat sedikit turis yang masuk ketika kasus positif harian mencapai puncaknya di tahun 2021.'''
 # Grafik korelasi
