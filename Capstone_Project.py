@@ -40,9 +40,9 @@ df['Tahun']=pd.to_datetime(df['Tahun'], format='%Y')
 line1 = alt.mark_line(stroke='#5276A7', interpolate='monotone', point=alt.OverlayMarkDef(color="blue")).encode(x = 'Tahun', y = alt.Y('Jumlah Turis', axis=alt.Axis(title='Jumlah Turis (Juta)', titleColor='#5276A7'),scale=alt.Scale(domain=[0, 20]))
 #st.line_chart(data = df, interpolate='monotone', use_container_width=True)
 
-st.caption("""
-    <a style='display: block; text-align: center;color: black;' href="https://www.bps.go.id/indicator/16/1150/1/jumlah-kunjungan-wisatawan-mancanegara-per-bulan-ke-indonesia-menurut-pintu-masuk-2017---sekarang.html">Sumber: Badan Pusat Statistik</a>
-    """,unsafe_allow_html=True)
+st.caption("""<a style='display: block; text-align: center;color: black;' 
+href="https://www.bps.go.id/indicator/16/1150/1/jumlah-kunjungan-wisatawan-mancanegara-per-bulan-ke-indonesia-menurut-pintu-masuk-2017---sekarang.html">
+Sumber: Badan Pusat Statistik</a>""",unsafe_allow_html=True)
 
 """Menurut Badan Pusat Statistik, tingkat turis (wisatawan mancanegara) yang datang ke Indonesia hingga tahun 2019 mengalami kenaikan sebanyak **2 juta** turis, hal ini dapat dilihat pada grafik diatas. Namun saat tingkat turis yang datang sedang tinggi, terjadi pandemi covid-19 di seluruh dunia termasuk Indonesia pada awal tahun 2020 hingga sekarang. Hal ini memberikan dampak negatif dengan menurun drastisnya turis ke Indonesia mencapai **75 %** di tahun 2020."""
 
