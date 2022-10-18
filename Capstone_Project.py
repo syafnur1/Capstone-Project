@@ -165,7 +165,7 @@ text-align: center;
 }
 </style>
 <div class="footer">
-<p>(C) by Zulfikri Syafnur, 2022<a style='display: block; text-align: center;' href="https://www.linkedin.com/in/syafnur-zulfikri/" target="_blank">CP10-22</a></p>
+<p>(C) by Zulfikri Syafnur, 2022<a style='display: block; text-align: center;' href="" target="_blank">CP10-22</a></p>
 </div>
 """
 st.markdown(footer,unsafe_allow_html=True)
