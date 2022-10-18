@@ -34,11 +34,7 @@ df = pd.DataFrame([[13514963], [16106954], [4052923], [1557530], [202823]],
                     index=['2018', '2019', '2020', '2021', '2022'],
                     columns=['Jumlah Turis'])
 #plost.line_chart(data=df['Jumlah Turis'], x='index', y='Jumlah Turis', x_annot={'2020': "Ini ketika Pandemi Covid melanda Indonesia"},)
-#line1 = alt.mark_line(stroke='#5276A7', interpolate='monotone', point=alt.OverlayMarkDef(color="blue")).encode(
-    x = 'index',
-    y = alt.Y('Jumlah Turis', 
-    axis=alt.Axis(title='Jumlah Turis (Juta)', titleColor='#5276A7'),
-    scale=alt.Scale(domain=[0, 20]))
+#line1 = alt.mark_line(stroke='#5276A7', interpolate='monotone', point=alt.OverlayMarkDef(color="blue")).encode(x = 'index', y = alt.Y('Jumlah Turis', axis=alt.Axis(title='Jumlah Turis (Juta)', titleColor='#5276A7'),scale=alt.Scale(domain=[0, 20]))
 #st.line_chart(data = df, interpolate='monotone', use_container_width=True)
 
 
