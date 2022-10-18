@@ -16,17 +16,15 @@ kontak = st.container()
 
 with header:
     image = Image.open("Barantum.png")
-    st.image(image, use_column_width='auto', caption = "Sumber : barantum.com")
+    st.image(image, use_column_width='auto', caption = "Sumber : [barantum.com](https://www.barantum.com/blog/wp-content/uploads/2019/01/Wisata-Indonesia-Mempunyai-Peluang-Bisnis.jpg)")
     st.title('Analisis Pemulihan Sektor Pariwisata Pasca Pandemi di Indonesia')
     st.markdown('Capstone Project with **streamlit** by Zulfikri Syafnur')
     st.markdown('_________________')
 
-'''
-    # Analisis Pemulihan Sektor Pariwisata Pasca Pandemi di Indonesia
-    Capstone Project with **streamlit** by Zulfikri Syafnur
-    
-    ---
-'''
+with pendahuluan:
+    st.header('Kesiapan *Stakeholder* dalam membangkitkan kembali Pariwisata')
+    st.markdown('[Pariwisata](https://id.wikipedia.org/wiki/Pariwisata) merupakan cara suatu negara mempromosikan negara tersebut sehingga dapat dikinjungi oleh banyak orang. Di Indonesia, contoh pariwisata yang menjadi tujuan wisata yang terkenal di dunia adalah [Bali](https://bali.com/). Bali terkenal dengan berbagai objek wisatanya seperti wisata alam, wisata budaya, dan wisata bahari')
+    st.subheader("Jumlah Turis Asing Masuk ke Indonesia")
 
 '''
 ## Kesiapan *Stakeholder* dalam membangkitkan kembali Pariwisata
