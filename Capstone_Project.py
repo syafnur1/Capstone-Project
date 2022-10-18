@@ -31,26 +31,19 @@ with pendahuluan:
                 di dunia adalah [Bali](https://bali.com/). Bali terkenal dengan berbagai objek wisatanya seperti wisata alam, wisata budaya, 
                 dan wisata bahari''')
     st.subheader("Jumlah Turis Asing Masuk ke Indonesia")
-
-'''
-## Kesiapan *Stakeholder* dalam membangkitkan kembali Pariwisata
-[Pariwisata](https://id.wikipedia.org/wiki/Pariwisata) merupakan cara suatu negara mempromosikan negara tersebut sehingga dapat dikinjungi oleh banyak orang. Di Indonesia, contoh pariwisata yang menjadi tujuan wisata yang terkenal di dunia adalah [Bali](https://bali.com/). Bali terkenal dengan berbagai objek wisatanya seperti wisata alam, wisata budaya, dan wisata bahari
-'''
-
-st.subheader("Jumlah Turis Asing Masuk ke Indonesia")
-d = {'Tahun': ['2018','2019', '2020', '2021', '2022'], 
-       'Jumlah Turis': [13514963, 16106954, 4052923, 1557530, 202823]}
-df = pd.DataFrame(data = d)
-
-plost.line_chart(df, x='Tahun', y='Jumlah Turis', 
-                 color='red', legend='bottom', 
-                 pan_zoom='both', title='Jumlah Turis per Tahun',  
-                 x_annot={'2020': "Ini ketika Pandemi Covid melanda Indonesia"},
-                )
-
-st.caption("""<a style='display: block; text-align: center;color: black;' 
-href="https://www.bps.go.id/indicator/16/1150/1/jumlah-kunjungan-wisatawan-mancanegara-per-bulan-ke-indonesia-menurut-pintu-masuk-2017---sekarang.html">
-Sumber: Badan Pusat Statistik</a>""",unsafe_allow_html=True)
+    
+    d = {'Tahun': ['2018','2019', '2020', '2021', '2022'],
+         'Jumlah Turis': [13514963, 16106954, 4052923, 1557530, 202823]}
+    
+    df = pd.DataFrame(data = d)
+    # grafik 1
+    plost.line_chart(df, x='Tahun', y='Jumlah Turis', color='red', legend='bottom', 
+                     pan_zoom='both', title='Jumlah Turis per Tahun',
+                     x_annot={'2020': "Ini ketika Pandemi Covid melanda Indonesia"},
+                    )
+    st.caption("""<a style='display: block; text-align: center;color: black;'
+    href="https://www.bps.go.id/indicator/16/1150/1/jumlah-kunjungan-wisatawan-mancanegara-per-bulan-ke-indonesia-menurut-pintu-masuk-2017---sekarang.html">
+    Sumber: Badan Pusat Statistik</a>""",unsafe_allow_html=True)
 
 """Menurut Badan Pusat Statistik, tingkat turis (wisatawan mancanegara) yang datang ke Indonesia hingga tahun 2019 mengalami kenaikan sebanyak **2 juta** turis, hal ini dapat dilihat pada grafik diatas. Namun saat tingkat turis yang datang sedang tinggi, terjadi pandemi covid-19 di seluruh dunia termasuk Indonesia pada awal tahun 2020 hingga sekarang. Hal ini memberikan dampak negatif dengan menurun drastisnya turis ke Indonesia mencapai **75 %** di tahun 2020."""
 
