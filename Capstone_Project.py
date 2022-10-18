@@ -47,7 +47,7 @@ with pendahuluan:
                        template="plotly_white",
                      )
     grafik_1.update_layout(
-      plot_bgcolor="rgba(0,0,0,0)",
+      plot_bgcolor="white",
       xaxis=(dict(showgrid=False)),
       )
     
@@ -91,7 +91,7 @@ with korelasi:
     df3 = pd.read_csv('https://docs.google.com/spreadsheets/d/e/2PACX-1vQY21pKyD2OqXjhrC2JpODETvSyfj8fS8dWE87smTC4JoxnJDZV_n7gcFtjHzYFpCZGtrfnfMl1CxVN/pub?gid=0&single=true&output=csv')
     df3 = df3.rename(columns = {'Harian': 'Positif per Bulan', 'Turis' : 'Jumlah Turis'})
 
-    col3, col4= st.columns([1,2.5])
+    col3, col4= st.columns([0.5,2.5])
 
     with col3:
         correlation_matrix = df3[['Positif per Bulan', 'Jumlah Turis']].corr()
