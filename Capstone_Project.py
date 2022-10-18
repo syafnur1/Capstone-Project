@@ -34,7 +34,7 @@ d = {'Tahun': ['2018','2019', '2020', '2021', '2022'],
        'Jumlah Turis': [13514963, 16106954, 4052923, 1557530, 202823]}
 df = pd.DataFrame(data = d)
 
-plost.line_chart(df, x='Tahun', y='Jumlah Turis', color='red', legend='top', pan_zoom='both',x_annot={'2020': "Ini ketika Pandemi Covid melanda Indonesia"},)
+plost.line_chart(df, x='Tahun', y='Jumlah Turis', color='red', legend='top', pan_zoom='both', title='Jumlah Turis Asing Masuk ke Indonesia', x_annot={'2020': "Ini ketika Pandemi Covid melanda Indonesia"},)
 #base = alt.Chart(df, title="Jumlah Turis Asing Masuk ke Indonesia", height=300, width=700).encode(alt.X('Tahun', axis=alt.Axis(title='Tahun'))
 #line = base.mark_line(stroke='#5276A7', interpolate='monotone', point=alt.OverlayMarkDef(color="blue")).encode(x = 'Tahun', y = alt.Y('Jumlah Turis', axis=alt.Axis(title='Jumlah Turis (Juta)', titleColor='#5276A7'),scale=alt.Scale(domain=[0, 20]))
 #pb = alt.layer(line).resolve_scale( y = 'independent')
