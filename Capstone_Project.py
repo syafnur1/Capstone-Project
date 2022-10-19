@@ -208,11 +208,16 @@ gra_country = px.bar(negara_2018,
                          y="Negara",
                          title='<b>Jumlah Turis berdasarkan Negara<b>',
                          template="plotly_white",
-    )
+                    )
     
-    gra_country.update_layout(
-      plot_bgcolor="white",
-      yaxis=(dict(showgrid=False)),
-      )
+gra_country.update_layout(
+  plot_bgcolor="white",
+  yaxis=dict(
+    showgrid=False, 
+    showline=False,
+    showticklabels=True,
+    domain=[0, 0.85],
+  ),
+)
     
-    st.plotly_chart(gra_country)
+st.plotly_chart(gra_country)
