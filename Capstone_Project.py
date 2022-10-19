@@ -36,16 +36,16 @@ with pendahuluan:
     st.subheader("Jumlah Turis Asing Masuk ke Indonesia")
     
     d = {'Tahun': ['2018','2019', '2020', '2021', '2022'],
-         'Jumlah_Turis': [13514963, 16106954, 4052923, 1557530, 202823]}
+         'Jumlah Turis': [13514963, 16106954, 4052923, 1557530, 202823]}
     
     df = pd.DataFrame(data = d)
     # grafik 1
-    grafik_1 = px.line(df, x='Tahun', y='Jumlah_Turis',
+    grafik_1 = px.line(df, x='Tahun', y='Jumlah Turis',
                        markers=True, 
                        title='<b>Jumlah Turis per Tahun<b>',
                        template="plotly_white",
                      )
-    grafik_1.update_layout(
+    grafik_1.update_layout(xaxis_title='Tahun (Mar-2020 - Mar-2022)',
       plot_bgcolor="white",
       xaxis=(dict(showgrid=False)),
       )
@@ -79,13 +79,6 @@ with korelasi:
                 puncaknya di tahun 2021.''')
 
     # korelasi
-    st.markdown('**Apakah terdapat hubungan antara Jumlah Turis dengan Pandemi Covid?**')
-    st.markdown('> - H0 : Tidak terdapat hubungan antara Jumlah Turis dengan Pandemi Covid')
-    st.markdown('> - H1 : Terdapat hubungan antara Jumlah Turis dengan Pandemi Covid')
-
-    code = '''r = nΣxy–(Σx)(Σy) / √{nΣx²–(Σx)²}{nΣy² – (Σy)²}'''
-    st.code(code, language = 'python')
-
     df3 = pd.read_csv('https://docs.google.com/spreadsheets/d/e/2PACX-1vQY21pKyD2OqXjhrC2JpODETvSyfj8fS8dWE87smTC4JoxnJDZV_n7gcFtjHzYFpCZGtrfnfMl1CxVN/pub?gid=0&single=true&output=csv')
     df3 = df3.rename(columns = {'Harian': 'Positif per Bulan', 'Turis' : 'Jumlah Turis'})
 
