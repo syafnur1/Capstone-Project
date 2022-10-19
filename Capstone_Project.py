@@ -184,6 +184,24 @@ groupby_column = st.selectbox(
     
 # -- Group Negara
 output_columns =['2018',  '2019', '2020', '2021',  '2022']
-country_grouped = country.sort_values(by = [groupby_column], ascending=False, as_index=True)[output_columns].head(5)
+country_grouped = country.sort_values(by = [groupby_column], ascending=False,)[output_columns].head(5)
  
-st.dataframe(country_grouped)
+gra_country = px.bar(country_grouped,
+                     x=groupby_column,
+                     y="Negara",
+                     title='<b>Jumlah Turis berdasarkan Negara<b>',
+                     template="plotly_white",
+                    )
+    
+gra_country.update_layout(
+  plot_bgcolor="white",
+  yaxis=dict(
+    showgrid=False, 
+    showline=False,
+    showticklabels=True,
+    domain=[0, 0.85],
+  ),
+)
+    
+st.plotly_chart(gra_country)
+
