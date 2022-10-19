@@ -159,7 +159,7 @@ with penutup:
 
 with pustaka:
     st.subheader("Daftar Pustaka")
-    st.text('''
+    st.markdown('''
                 [BPS](https://www.bps.go.id/indicator/16/1150/1/jumlah-kunjungan-wisatawan-mancanegara-per-bulan-ke-indonesia-menurut-pintu-masuk-2017---sekarang.html)
                 
                 [Kawal Covid 19](https://docs.google.com/spreadsheets/d/1ma1T9hWbec1pXlwZ89WakRk-OfVUQZsOCFl4FwZxzVw/htmlview)
