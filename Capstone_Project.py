@@ -114,7 +114,7 @@ with negara:
     
     # -- Group Negara
     output_columns =['2018',  '2019', '2020', '2021',  '2022']
-    country_grouped = country.sort_values(by = [groupby_column], ascending=False,)[output_columns].head(5)
+    country_grouped = country.sort_values(by = [groupby_column], )[output_columns].head(5)
 
     gra_country = px.bar(country_grouped,
                      x=groupby_column,
@@ -140,7 +140,7 @@ with negara:
     
     st.plotly_chart(gra_country)
   
-    st.markdown('''Dapat dilihat bahwa Negara yang paling sering banyak berkunjung ke Indonesia adalah negara-negara tetangga, dan mayoritas negara 
+    st.markdown('''Dapat dilihat bahwa Negara yang paling sering berkunjung ke Indonesia adalah negara-negara tetangga, dan mayoritas negara 
                 tersebut berasal dari benua Asia yang jaraknya tidak jauh dari Indonesia.''')
     st.markdown('_________________')
 
