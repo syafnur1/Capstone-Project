@@ -184,6 +184,6 @@ groupby_column = st.selectbox(
     
 # -- Group Negara
 output_columns =['2018',  '2019', '2020', '2021',  '2022']
-country_grouped = country.groupby(by = [groupby_column], as_index=False)[output_columns].count()
+country_grouped = country.sort_values(by = [groupby_column], ascending=False)[output_columns].head(5)
  
 st.dataframe(country_grouped)
