@@ -195,24 +195,24 @@ st.markdown(footer,unsafe_allow_html=True)
                      #pan_zoom='both', title='Jumlah Turis per Tahun',
                      #x_annot={'2020': "Ini ketika Pandemi Covid melanda Indonesia"},
                     #)
-#("""option = st.selectbox(
-#      'Tahun',
-#      ('2018', '2019', '2020', '2021', 2022))
-#    st.write('You selected:', option)
+option = st.selectbox(
+      'Tahun',
+      ('Tahun 2018', 'Tahun 2019', 'Tahun 2020', 'Tahun 2021', 'Tahun 2022'))
+st.write('You selected:', option)
     
-    #negara_2018 = country.sort_values(by="2018", ascending=False).head(5)
-   # 
-    #gra_country = px.bar(negara_2018,
-         #                orientation="h",
-        #                 x="2018",
-       #                  y="Negara",
-      #                   title='<b>Jumlah Turis berdasarkan Negara<b>',
-     #                    template="plotly_white",
-    #)
+negara_2018 = country.sort_values(by="2018", ascending=False).head(5)
+ 
+gra_country = px.bar(negara_2018,
+                         orientation="h",
+                         x="2018",
+                         y="Negara",
+                         title='<b>Jumlah Turis berdasarkan Negara<b>',
+                         template="plotly_white",
+    )
     
-    #gra_country.update_layout(
-    #  plot_bgcolor="white",
-   #   xaxis=(dict(showgrid=False)),
-  #    )
- #   
-#    st.plotly_chart(gra_country)""")
+    gra_country.update_layout(
+      plot_bgcolor="white",
+      xaxis=(dict(showgrid=False)),
+      )
+    
+    st.plotly_chart(gra_country)
