@@ -188,7 +188,7 @@ country_grouped = country.sort_values(by = [groupby_column], ascending=False,)[o
  
 gra_country = px.bar(country_grouped,
                      x=groupby_column,
-                     y="Negara",
+                    
                      title='<b>Jumlah Turis berdasarkan Negara<b>',
                      template="plotly_white",
                     )
