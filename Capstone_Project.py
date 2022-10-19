@@ -45,7 +45,7 @@ with pendahuluan:
                        title='<b>Jumlah Turis per Tahun<b>',
                        template="plotly_white",
                      )
-    grafik_1.update_layout(xaxis_title='Tahun (Mar-2020 - Mar-2022)',
+    grafik_1.update_layout(xaxis_title='Tahun (Mar-2020 sampai Mar-2022)',
       plot_bgcolor="white",
       xaxis=(dict(showgrid=False)),
       )
@@ -152,15 +152,11 @@ with penutup:
 with pustaka:
     st.subheader("Daftar Pustaka")
     st.markdown('''
-                [BPS](https://www.bps.go.id/indicator/16/1150/1/jumlah-kunjungan-wisatawan-mancanegara-per-bulan-ke-indonesia-menurut-pintu-masuk-2017---sekarang.html)
-                
-                [Kawal Covid 19](https://docs.google.com/spreadsheets/d/1ma1T9hWbec1pXlwZ89WakRk-OfVUQZsOCFl4FwZxzVw/htmlview)
-                
-                [Model Decision Tree untuk Prediksi Jadwal Kerja menggunakan Scikit-Learn](https://jurnal.umj.ac.id/index.php/semnastek/article/view/5239/3517)
-
-                [barantum.com](https://www.barantum.com/blog/wp-content/uploads/2019/01/Wisata-Indonesia-Mempunyai-Peluang-Bisnis.jpg)
-
-                [Statistika Non-Parametrik Analisis Jalur](https://slideplayer.info/slide/3099519)
+                - [BPS](https://www.bps.go.id/indicator/16/1150/1/jumlah-kunjungan-wisatawan-mancanegara-per-bulan-ke-indonesia-menurut-pintu-masuk-2017---sekarang.html)
+                - [Kawal Covid 19](https://docs.google.com/spreadsheets/d/1ma1T9hWbec1pXlwZ89WakRk-OfVUQZsOCFl4FwZxzVw/htmlview)
+                - [Model Decision Tree untuk Prediksi Jadwal Kerja menggunakan Scikit-Learn](https://jurnal.umj.ac.id/index.php/semnastek/article/view/5239/3517)
+                - [barantum.com](https://www.barantum.com/blog/wp-content/uploads/2019/01/Wisata-Indonesia-Mempunyai-Peluang-Bisnis.jpg)
+                - [Statistika Non-Parametrik Analisis Jalur](https://slideplayer.info/slide/3099519)
                 ''')
 
 with kontak:
