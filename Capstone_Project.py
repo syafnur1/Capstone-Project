@@ -180,7 +180,7 @@ st.markdown(footer,unsafe_allow_html=True)
 
 groupby_column = st.selectbox(
       'Pilih Tahun : ',
-      ('Tahun 2018', 'Tahun 2019', 'Tahun 2020', 'Tahun 2021', 'Tahun 2022'))
+      ('2018', '2019', '2020', '2021', '2022'))
     
 # -- Group Negara
 output_columns =['2018',  '2019', '2020', '2021',  '2022']
