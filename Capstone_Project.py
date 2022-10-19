@@ -124,7 +124,11 @@ with negara:
     
     gra_country.update_layout(
       plot_bgcolor="white",
-      
+      xaxis=dict(
+      showgrid=False, 
+      showline=False,
+      showticklabels=True,
+      ),
       yaxis=dict(
       showgrid=False, 
       showline=False,
