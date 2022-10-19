@@ -177,6 +177,15 @@ with kontak:
 
                 [![LinkedIn](https://img.shields.io/badge/syafnur-zulfikri-0077B5?style=for-the-badge&logo=linkedin&logoColor=white&link=https://www.linkedin.com/in/syafnur-zulfikri/)](https://www.linkedin.com/in/syafnur-zulfikri/)
                 ''')
+
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
     
 #9EA25D:y, #615DA2:b
 footer="""<style>
