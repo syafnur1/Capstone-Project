@@ -178,46 +178,12 @@ text-align: left;
 st.markdown(footer,unsafe_allow_html=True)
 
 
-# Data prep
-
-# End of Data Prep
-
-# Image / can change with interactive DB
-#image = Image.open("TurisTahun.png")
-#st.image(image, use_column_width='auto', caption = "Sumber : Badan Pusat Statistik")
-
-# Chart
-#df1= df.iloc[0:10]
-#st.line_chart(data=df1, x = 'Ship Date', y = 'Profit', width=0, height=0, use_container_width=True)
-
-#st.bar_chart(data=df1, x = 'Ship Date', y = 'Profit')
-#plost.line_chart(df, x='Tahun', y='Jumlah_Turis', color='red', legend='bottom', 
-                     #pan_zoom='both', title='Jumlah Turis per Tahun',
-                     #x_annot={'2020': "Ini ketika Pandemi Covid melanda Indonesia"},
-                    #)
-option = st.selectbox(
-      'Tahun',
+groupby_column = st.selectbox(
+      'Pilih Tahun : ',
       ('Tahun 2018', 'Tahun 2019', 'Tahun 2020', 'Tahun 2021', 'Tahun 2022'))
-st.write('You selected:', option)
     
-negara_2018 = country.sort_values(by="2018", ascending=False).head(5)
+# -- Group Negara
+output_columns =['2018',  '2019', '2020', '2021',  '2022']
+country_grouped = country.groupby(by = [groupby_column], as_index=False)[output_columns].sum()
  
-gra_country = px.bar(negara_2018,
-                         orientation="h",
-                         x=negara_2018["2018"],
-                         y="Negara",
-                         title='<b>Jumlah Turis berdasarkan Negara<b>',
-                         template="plotly_white",
-                    )
-    
-gra_country.update_layout(
-  plot_bgcolor="white",
-  yaxis=dict(
-    showgrid=False, 
-    showline=False,
-    showticklabels=True,
-    domain=[0, 0.85],
-  ),
-)
-    
-st.plotly_chart(gra_country)
+st.dataframe(country_grouped)
