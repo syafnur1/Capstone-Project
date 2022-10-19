@@ -142,6 +142,7 @@ with negara:
   
     st.markdown('''Dapat dilihat bahwa Negara yang paling sering banyak berkunjung ke Indonesia adalah negara-negara tetangga, dan mayoritas negara 
                 tersebut berasal dari benua Asia yang jaraknya tidak jauh dari Indonesia.''')
+    st.markdown('_________________')
 
 # Machine Learning + grafik
 
