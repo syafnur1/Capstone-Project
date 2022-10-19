@@ -106,6 +106,7 @@ with negara:
     # Deklarasi dataset
     country = pd.read_csv('https://docs.google.com/spreadsheets/d/e/2PACX-1vTXspAWpKN-lhLVzwafiDNnwXAUf_l_I-xsdO3AVT0bDzTsgS5NyMnaOQRB865eBscEt9NKka4cJ-pw/pub?gid=0&single=true&output=csv')
     country = country.drop(['Grand Total'], axis=1)
+    country = country.set_index('Negara')
     
     st.dataframe(country.style.highlight_max(axis=0), use_container_width=True)
     
@@ -185,7 +186,6 @@ groupby_column = st.selectbox(
 # -- Group Negara
 output_columns =['2018',  '2019', '2020', '2021',  '2022']
 country_grouped = country.sort_values(by = [groupby_column], ascending=False,)[output_columns].head(5)
-negara = country["Negara"].sort_values(by = [groupby_column], ascending=False,)[output_columns].head(5)
 
 gra_country = px.bar(country_grouped,
                      x=groupby_column,
