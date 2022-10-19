@@ -114,7 +114,7 @@ with negara:
     
     # -- Group Negara
     output_columns =['2018',  '2019', '2020', '2021',  '2022']
-    country_grouped = country.sort_values(by = [groupby_column], )[output_columns].head(5)
+    country_grouped = country.sort_values(by = [groupby_column], ascending=False,)[output_columns].head(5)
 
     gra_country = px.bar(country_grouped,
                      x=groupby_column,
