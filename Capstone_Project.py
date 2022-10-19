@@ -148,6 +148,7 @@ with penutup:
                 mempercepat membuka kembali penerbangan yang masuk ke Indonesia.''')
     st.markdown('''- Kementrian Pariwisata juga harus memiliki inovasi-inovasi terbaik untuk mempromosikan Indonesia ke mancanegara agar Turis asing 
                 berminat untuk datang ke Indonesia.''')
+    st.markdown('_________________')
 
 with pustaka:
     st.subheader("Daftar Pustaka")
@@ -158,6 +159,7 @@ with pustaka:
                 - [barantum.com](https://www.barantum.com/blog/wp-content/uploads/2019/01/Wisata-Indonesia-Mempunyai-Peluang-Bisnis.jpg)
                 - [Statistika Non-Parametrik Analisis Jalur](https://slideplayer.info/slide/3099519)
                 ''')
+    st.markdown('_________________')
 
 with kontak:
     st.subheader("Contacts")
