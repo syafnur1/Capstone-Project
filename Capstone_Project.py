@@ -100,9 +100,10 @@ with negara:
     country = country.drop(['Grand Total'], axis=1)
     country = country.set_index('Negara')
     
-    groupby_column = st.selectbox(
+    groupby_column = st.radio(
       'Pilih Tahun : ',
-      ('2018', '2019', '2020', '2021', '2022'))
+      ['2018', '2019', '2020', '2021', '2022'], 
+    horizontal=True)
     
     # -- Group Negara
     output_columns =['2018',  '2019', '2020', '2021',  '2022']
