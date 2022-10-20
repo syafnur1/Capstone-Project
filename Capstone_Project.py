@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import plost
 import plotly.express as px
+import plotly.graph_objects as go
 from PIL import Image
 
 st.set_page_config(page_title="Capstone Project",
@@ -205,3 +206,10 @@ text-align: left;
 </div>
 """
 st.markdown(footer,unsafe_allow_html=True)
+
+fig = go.Figure(go.Bar(
+            x=[20, 14, 23],
+            y=['giraffes', 'orangutans', 'monkeys'],
+            orientation='h'))
+
+fig.show()
