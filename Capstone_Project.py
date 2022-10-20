@@ -206,10 +206,3 @@ text-align: left;
 </div>
 """
 st.markdown(footer,unsafe_allow_html=True)
-
-fig = go.Figure(go.Bar(
-            x=[20, 14, 23],
-            y=['giraffes', 'orangutans', 'monkeys'],
-            orientation='h'))
-
-fig.show()
