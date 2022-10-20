@@ -113,7 +113,7 @@ with negara:
                      x=groupby_column,
                      title='<b>Jumlah Turis berdasarkan Negara<b>',
                      template="plotly_white",
-                     color="Negara"
+                     
                     )
     
     gra_country.update_layout(
