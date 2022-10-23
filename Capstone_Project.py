@@ -87,6 +87,7 @@ with korelasi:
                           pivot_tb,
                           y=["Darat", "Laut", "Udara"],
                           markers=True,
+                          template="plotly_white",
     )
 
     fig_turis_bulan.update_layout(
