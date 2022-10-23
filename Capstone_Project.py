@@ -49,8 +49,7 @@ with pendahuluan:
       title='<b>Jumlah Turis per Tahun<b>',
       xaxis_title='Tahun (Mar-18 sampai Mar-22)',
       plot_bgcolor="white",
-      
-      yaxis=(dict(showgrid=False)),
+      xaxis=(dict(showgrid=False)),
       )
     
     st.plotly_chart(grafik_1)      
