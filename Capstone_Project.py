@@ -39,17 +39,18 @@ with pendahuluan:
     
     df = pd.DataFrame(data = d)
     # grafik 1
-    grafik_1 = px.line(df, x='Tahun', y='Jumlah Turis',
+    grafik_1 = px.line(df, 
+                       x='Tahun', 
+                       y='Jumlah Turis',
                        markers=True, 
-                       
                        template="plotly_white",
                      )
     grafik_1.update_layout(
       title='<b>Jumlah Turis per Tahun<b>',
       xaxis_title='Tahun (Mar-18 sampai Mar-22)',
       plot_bgcolor="white",
-      xaxis=(dict(showgrid=False)),
-      yaxis=(dict(showgrid=False))
+      
+      yaxis=(dict(showgrid=False)),
       )
     
     st.plotly_chart(grafik_1)      
