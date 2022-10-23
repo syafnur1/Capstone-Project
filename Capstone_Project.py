@@ -97,7 +97,7 @@ with korelasi:
                    xaxis=(dict(showgrid=False)),
     )
 
-    fig_turis_bulan.show()
+    st.plotly_chart(fig_turis_bulan)
     
     image = Image.open("Pinturis.png")
     st.image(image, use_column_width='auto')
