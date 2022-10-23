@@ -16,6 +16,11 @@ penutup = st.container()
 pustaka = st.container()
 kontak = st.container()
 
+# Load Dataset
+
+turis = pd.read_csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vQY21pKyD2OqXjhrC2JpODETvSyfj8fS8dWE87smTC4JoxnJDZV_n7gcFtjHzYFpCZGtrfnfMl1CxVN/pub?gid=1602651423&single=true&output=csv")
+country = pd.read_csv('https://docs.google.com/spreadsheets/d/e/2PACX-1vTXspAWpKN-lhLVzwafiDNnwXAUf_l_I-xsdO3AVT0bDzTsgS5NyMnaOQRB865eBscEt9NKka4cJ-pw/pub?gid=0&single=true&output=csv')
+
 with header:
     image = Image.open("Barantum.png")
     st.image(image, use_column_width='auto')
@@ -67,6 +72,33 @@ with korelasi:
     st.subheader("Hubungan Jumlah Turis dengan Pandemi")
     
     st.subheader("Jumlah Turis per Pintu Masuk")
+
+    # Cleansing Dataset
+    turis["Bulan Tahun"] = pd.to_datetime(turis["Bulan Tahun"])
+    turis_bulan = turis[(turis["Bulan Tahun"] <= "3/31/2022")]
+    turis_bulan = turis_bulan.groupby(['Bulan Tahun', 'Tipe Pintu Masuk']).agg({'Turis': 'sum'})
+    
+    pivot_tb = pd.pivot_table(data=turis_bulan, 
+               values='Turis', 
+               index='Bulan Tahun', 
+               columns=['Tipe Pintu Masuk'])
+    
+    fig_turis_bulan = px.line(
+                          pivot_tb,
+                          y=["Darat", "Laut", "Udara"],
+                          markers=True,
+    )
+
+    fig_turis_bulan.update_layout(
+                   title='<b>Turis per Pintu Masuk<b>',
+                   xaxis_title='Tahun (Mar-18 sampai Mar-22)',
+                   yaxis_title='Jumlah Turis', 
+                   plot_bgcolor="white",
+                   xaxis=(dict(showgrid=False)),
+    )
+
+    fig_turis_bulan.show()
+    
     image = Image.open("Pinturis.png")
     st.image(image, use_column_width='auto')
     st.caption("""<a style='display: block; text-align: center;color: black;' href="https://www.bps.go.id/indicator/16/1150/1/jumlah-kunjungan-wisatawan-mancanegara-per-bulan-ke-indonesia-menurut-pintu-masuk-2017---sekarang.html">Sumber: Badan Pusat Statistik</a>""",unsafe_allow_html=True)
@@ -97,8 +129,7 @@ with korelasi:
 # Turis yang masuk per Negara Asal
 with negara:
     st.subheader("Kunjungan Turis berdasarkan Negara Asal")
-    # Deklarasi dataset
-    country = pd.read_csv('https://docs.google.com/spreadsheets/d/e/2PACX-1vTXspAWpKN-lhLVzwafiDNnwXAUf_l_I-xsdO3AVT0bDzTsgS5NyMnaOQRB865eBscEt9NKka4cJ-pw/pub?gid=0&single=true&output=csv')
+    # Cleansing dataset
     country = country.drop(['Grand Total'], axis=1)
     country = country.set_index('Negara')
     
