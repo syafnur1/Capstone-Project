@@ -1,9 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import plost
 import plotly.express as px
-import plotly.graph_objects as go
 from PIL import Image
 
 st.set_page_config(page_title="Capstone Project",
@@ -43,12 +41,15 @@ with pendahuluan:
     # grafik 1
     grafik_1 = px.line(df, x='Tahun', y='Jumlah Turis',
                        markers=True, 
-                       title='<b>Jumlah Turis per Tahun<b>',
+                       
                        template="plotly_white",
                      )
-    grafik_1.update_layout(xaxis_title='Tahun (Mar-2020 sampai Mar-2022)',
+    grafik_1.update_layout(
+      title='<b>Jumlah Turis per Tahun<b>',
+      xaxis_title='Tahun (Mar-18 sampai Mar-22)',
       plot_bgcolor="white",
       xaxis=(dict(showgrid=False)),
+      yaxis=(dict(showgrid=False))
       )
     
     st.plotly_chart(grafik_1)      
