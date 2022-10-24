@@ -184,7 +184,8 @@ with negara:
 
     gra_country = px.bar(country_grouped,
                      x=groupby_column,
-                     template="plotly_white", 
+                     template="plotly_white",
+                     color_discrete_sequence =['green']*len(country_grouped)
                     )
     
     gra_country.update_layout(
