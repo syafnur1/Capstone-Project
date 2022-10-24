@@ -119,10 +119,17 @@ with korelasi:
     st.subheader("Kasus Positif Harian Covid di Indonesia")
     
     # Cleansing Dataset
+    covid["Bulan Tahun"] = pd.to_datetime(covid["Bulan Tahun"])
+    covid.rename(columns={'Bulan Tahun' : 'Bulan_Tahun'}, inplace=True)
+    covid_bulan = covid[(covid["Bulan Tahun"] <= "3/31/2022")]
     
-    image = Image.open("Positif.png")
-    st.image(image, use_column_width='auto')
+    fig_covid_bulan = px.line(
+      covid, x="Bulan_Tahun",
+      y="Kasus harian",
+    )
 
+    st.plotly_chart(fig_covid_bulan)
+    
     st.caption("""<a style='display: block; text-align: center;color: black;' href="https://docs.google.com/spreadsheets/d/1ma1T9hWbec1pXlwZ89WakRk-OfVUQZsOCFl4FwZxzVw/htmlview">Sumber: Kawal Covid 19</a>""",unsafe_allow_html=True)
     
     st.markdown('''Dari kedua grafik diatas dapat diambil kesimpulan bahwa kasus Covid-19 yang muncul di tahun 2020 mempengaruhi jumlah turis yang 
