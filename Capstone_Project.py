@@ -20,6 +20,8 @@ kontak = st.container()
 
 turis = pd.read_csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vQY21pKyD2OqXjhrC2JpODETvSyfj8fS8dWE87smTC4JoxnJDZV_n7gcFtjHzYFpCZGtrfnfMl1CxVN/pub?gid=1602651423&single=true&output=csv")
 country = pd.read_csv('https://docs.google.com/spreadsheets/d/e/2PACX-1vTXspAWpKN-lhLVzwafiDNnwXAUf_l_I-xsdO3AVT0bDzTsgS5NyMnaOQRB865eBscEt9NKka4cJ-pw/pub?gid=0&single=true&output=csv')
+covid = pd.read_csv('https://docs.google.com/spreadsheets/d/e/2PACX-1vQY21pKyD2OqXjhrC2JpODETvSyfj8fS8dWE87smTC4JoxnJDZV_n7gcFtjHzYFpCZGtrfnfMl1CxVN/pub?gid=340714200&single=true&output=csv')
+df3 = pd.read_csv('https://docs.google.com/spreadsheets/d/e/2PACX-1vQY21pKyD2OqXjhrC2JpODETvSyfj8fS8dWE87smTC4JoxnJDZV_n7gcFtjHzYFpCZGtrfnfMl1CxVN/pub?gid=0&single=true&output=csv')
 
 with header:
     image = Image.open("Barantum.png")
@@ -116,13 +118,12 @@ with korelasi:
                 puncaknya di tahun 2021.''')
 
     # korelasi
-    df3 = pd.read_csv('https://docs.google.com/spreadsheets/d/e/2PACX-1vQY21pKyD2OqXjhrC2JpODETvSyfj8fS8dWE87smTC4JoxnJDZV_n7gcFtjHzYFpCZGtrfnfMl1CxVN/pub?gid=0&single=true&output=csv')
     df3 = df3.rename(columns = {'Harian': 'Positif per Bulan', 'Turis' : 'Jumlah Turis'})
 
     col3, col4= st.columns([1.55,2.5])
 
     with col3:
-        correlation_matrix = df3[['Positif per Bulan', 'Jumlah Turis']].corr()
+        correlation_matrix = round(df3[['Positif per Bulan', 'Jumlah Turis']].corr(), 2)
         correlation_matrix 
 
     with col4:
