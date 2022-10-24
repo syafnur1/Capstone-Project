@@ -89,7 +89,8 @@ with korelasi:
                           y=["Darat", "Laut", "Udara"],
                           markers=True,
                           template="plotly_white",
-                          labels={"variable": "Pintu Masuk"}
+                          labels={"variable" : "Pintu Masuk", 
+                                 "value" : "Jumlah Turis"}
     )
 
     fig_turis_bulan.update_layout(
