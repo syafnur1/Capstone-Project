@@ -123,11 +123,11 @@ with korelasi:
     col3, col4= st.columns([1.55,2.5])
 
     with col3:
-        correlation_matrix = round(df3[['Positif per Bulan', 'Jumlah Turis']].corr(), 3)
+        correlation_matrix = round(df3[['Positif per Bulan', 'Jumlah Turis']].corr(), 2)
         correlation_matrix 
 
     with col4:
-        st.markdown('''Dari hasil korelasi dua data diatas, didapatkan bahwa **r = -0,42** . Hal ini berarti kita dapat mereject **H0**. 
+        st.markdown('''Dari hasil korelasi dua data diatas, didapatkan bahwa **r = -0,43** . Hal ini berarti kita dapat mereject **H0**. 
                     Dengan demikian Pandemi Covid **mempengaruhi secara signifikan** terhadap Jumlah Turis yang memasuki Indonesia.''')
 
 # Turis yang masuk per Negara Asal
