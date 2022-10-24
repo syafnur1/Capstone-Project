@@ -53,7 +53,12 @@ with pendahuluan:
                        template="plotly_white",
                       )
     grafik_1.update_layout(
-      title='<b>Jumlah Turis per Tahun<b>',
+      title={
+        'text': "<b>Jumlah Turis per Tahun<b>",
+        'y':0.9,
+        'x':0.5,
+        'xanchor': 'center',
+        'yanchor': 'top'},
       xaxis_title='Tahun (Mar-18 sampai Mar-22)',
       plot_bgcolor="white",
       xaxis=(dict(showgrid=False)),
