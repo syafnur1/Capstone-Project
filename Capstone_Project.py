@@ -154,12 +154,12 @@ with korelasi:
                 puncaknya di tahun 2021.''')
 
     # korelasi
-    df3 = df3.rename(columns = {'Harian': 'Jumlah Positif', 'Turis' : 'Jumlah Turis'})
+    df3 = df3.rename(columns = {'Harian': 'Positif Covid', 'Turis' : 'Jumlah Turis'})
 
     col3, col4= st.columns([1.55,2.5])
 
     with col3:
-        correlation_matrix = round(df3[['Jumlah Positif', 'Jumlah Turis']].corr(), 2)
+        correlation_matrix = round(df3[['Positif Covid', 'Jumlah Turis']].corr(), 2)
         correlation_matrix 
 
     with col4:
