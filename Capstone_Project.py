@@ -121,7 +121,7 @@ with korelasi:
     # Cleansing Dataset
     covid["Bulan Tahun"] = pd.to_datetime(covid["Bulan Tahun"])
     covid.rename(columns={'Bulan Tahun' : 'Bulan_Tahun'}, inplace=True)
-    covid_bulan = covid[(covid["Bulan Tahun"] <= "3/31/2022")]
+    covid_bulan = covid[(covid["Bulan_Tahun"] <= "3/31/2022")]
     
     fig_covid_bulan = px.line(
       covid, x="Bulan_Tahun",
