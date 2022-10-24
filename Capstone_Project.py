@@ -206,7 +206,7 @@ with negara:
                 showline=False,
                 showticklabels=True,
                 domain=[0, 0.85],
-      ),
+                autorange="reversed"),
     )
     
     st.plotly_chart(gra_country)
