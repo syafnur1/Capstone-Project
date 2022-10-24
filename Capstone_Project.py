@@ -128,6 +128,7 @@ with korelasi:
                       covid, x="Bulan_Tahun",
                       y="Kasus harian",
                       template="plotly_white",
+                      color_discrete_sequence =['red']*len(covid),
                       labels={"Kasus harian" : "Kasus Harian", 
                                  "Bulan_Tahun" : "Tanggal"}
     )
@@ -185,7 +186,7 @@ with negara:
     gra_country = px.bar(country_grouped,
                      x=groupby_column,
                      template="plotly_white",
-                     color_discrete_sequence =['green']*len(country_grouped)
+                     color_discrete_sequence =['green']*len(country_grouped),
                     )
     
     gra_country.update_layout(
