@@ -53,6 +53,7 @@ with pendahuluan:
                        y='Jumlah Turis',
                        markers=True, 
                        template="plotly_white",
+                       color_discrete_sequence =['#1F77B4']*len(covid),
     )
     grafik_1.update_layout(
                        title={
