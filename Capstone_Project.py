@@ -217,7 +217,7 @@ with pustaka:
     st.markdown('_________________')
 
 with kontak:
-    st.subheader("Contacts")
+    st.subheader("Let's Connect with me")
     st.markdown('''
                 [![MAIL Badge](https://img.shields.io/badge/-z26syafnur@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:z26syafnur@gmail.com)](mailto:z26syafnur@gmail.com)
 
