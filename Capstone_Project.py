@@ -128,7 +128,7 @@ with korelasi:
                       covid, x="Bulan_Tahun",
                       y="Kasus harian",
                       template="plotly_white",
-                      color_discrete_sequence =['#F6222E']*len(covid),
+                      color_discrete_sequence =['#AF0038']*len(covid),
                       labels={"Kasus harian" : "Kasus Harian", 
                                  "Bulan_Tahun" : "Tanggal"}
     )
