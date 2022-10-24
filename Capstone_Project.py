@@ -99,7 +99,12 @@ with korelasi:
     )
 
     fig_turis_bulan.update_layout(
-                   title='<b>Turis per Pintu Masuk<b>',
+                   title={
+                          'text': "<b>Turis per Pintu Masuk<b>",
+                          'y':0.9,
+                          'x':0.5,
+                          'xanchor': 'center',
+                          'yanchor': 'top'},
                    xaxis_title='Tahun (Mar-18 sampai Mar-22)',
                    yaxis_title='Jumlah Turis', 
                    plot_bgcolor="white",
@@ -155,24 +160,28 @@ with negara:
 
     gra_country = px.bar(country_grouped,
                      x=groupby_column,
-                     title='<b>Jumlah Turis berdasarkan Negara<b>',
-                     template="plotly_white",
-                     
+                     template="plotly_white", 
                     )
     
     gra_country.update_layout(
-      plot_bgcolor="white",
-      xaxis=dict(tickmode="auto",
-      showgrid=False, 
-      showline=False,
-      showticklabels=True,
-      domain=[0, 0.85],
-      ),
-      yaxis=dict(tickmode="auto",
-      showgrid=False, 
-      showline=False,
-      showticklabels=True,
-      domain=[0, 0.85],
+                title={
+                          'text': "<b>Jumlah Turis berdasarkan Negara<b>",
+                          'y':0.9,
+                          'x':0.5,
+                          'xanchor': 'center',
+                          'yanchor': 'top'},
+                plot_bgcolor="white",
+                xaxis=dict(tickmode="auto",
+                showgrid=False, 
+                showline=False,
+                showticklabels=True,
+                domain=[0, 0.85],
+                ),
+                yaxis=dict(tickmode="auto",
+                showgrid=False, 
+                showline=False,
+                showticklabels=True,
+                domain=[0, 0.85],
       ),
     )
     
