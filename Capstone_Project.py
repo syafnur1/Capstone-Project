@@ -54,7 +54,9 @@ with pendahuluan:
                      )
     grafik_1.update_layout(
       title='<b>Jumlah Turis per Tahun<b>',
-      xaxis_title='Tahun (Mar-18 sampai Mar-22)',
+      labels={
+        "Tahun": "Tahun (Mar-18 sampai Mar-22)"
+      },
       plot_bgcolor="white",
       xaxis=(dict(showgrid=False)),
       )
@@ -72,7 +74,6 @@ with pendahuluan:
 # Grafik 2 & 3
 with korelasi:
     st.subheader("Hubungan Jumlah Turis dengan Pandemi")
-    
     st.subheader("Jumlah Turis per Pintu Masuk")
 
     # Cleansing Dataset
