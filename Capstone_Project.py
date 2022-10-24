@@ -6,7 +6,7 @@ from PIL import Image
 
 st.set_page_config(page_title="Capstone Project",
                    page_icon=":airplane:",
-                   )
+)
 
 header = st.container()
 pendahuluan = st.container()
@@ -42,28 +42,29 @@ with pendahuluan:
     st.subheader("Jumlah Turis Asing Masuk ke Indonesia")
     
     d = {'Tahun': ['2018','2019', '2020', '2021', '2022'],
-         'Jumlah Turis': [13514963, 16106954, 4052923, 1557530, 202823]}
+         'Jumlah Turis': [13514963, 16106954, 4052923, 1557530, 202823]
+        }
     
     df = pd.DataFrame(data = d)
+    
     # grafik 1
     grafik_1 = px.line(df, 
                        x='Tahun', 
                        y='Jumlah Turis',
                        markers=True, 
                        template="plotly_white",
-                      )
+    )
     grafik_1.update_layout(
-      title={
-        'text': "<b>Jumlah Turis per Tahun<b>",
-        'y':0.9,
-        'x':0.5,
-        'xanchor': 'center',
-        'yanchor': 'top'},
-      xaxis_title='Tahun (Mar-18 sampai Mar-22)',
-      plot_bgcolor="white",
-      xaxis=(dict(showgrid=False)),
-      )
-    
+                       title={
+                         'text': "<b>Jumlah Turis per Tahun<b>",
+                         'y':0.9,
+                         'x':0.5,
+                         'xanchor': 'center',
+                         'yanchor': 'top'},
+                       xaxis_title='Tahun (Mar-18 sampai Mar-22)',
+                       plot_bgcolor="white",
+                       xaxis=(dict(showgrid=False)),
+    )
     st.plotly_chart(grafik_1)      
       
     st.caption("""<a style='display: block; text-align: center;color: black;'
@@ -124,8 +125,24 @@ with korelasi:
     covid_bulan = covid[(covid["Bulan_Tahun"] <= "3/31/2022")]
     
     fig_covid_bulan = px.line(
-      covid, x="Bulan_Tahun",
-      y="Kasus harian",
+                      covid, x="Bulan_Tahun",
+                      y="Kasus harian",
+                      template="plotly_white",
+                      labels={"Kasus harian" : "Kasus Harian", 
+                                 "Bulan_Tahun" : "Tanggal"}
+    )
+    
+    fig_covid_bulan.update_layout(
+                   title={
+                          'text': "<b>Kasus Harian Covid<b>",
+                          'y':0.9,
+                          'x':0.5,
+                          'xanchor': 'center',
+                          'yanchor': 'top'},
+                   xaxis_title='Tahun (Mar-20 sampai Mar-22)',
+                   yaxis_title='Jumlah Positif', 
+                   plot_bgcolor="white",
+                   xaxis=(dict(showgrid=False)),
     )
 
     st.plotly_chart(fig_covid_bulan)
@@ -137,12 +154,12 @@ with korelasi:
                 puncaknya di tahun 2021.''')
 
     # korelasi
-    df3 = df3.rename(columns = {'Harian': 'Positif per Bulan', 'Turis' : 'Jumlah Turis'})
+    df3 = df3.rename(columns = {'Harian': 'Jumlah Positif', 'Turis' : 'Jumlah Turis'})
 
     col3, col4= st.columns([1.55,2.5])
 
     with col3:
-        correlation_matrix = round(df3[['Positif per Bulan', 'Jumlah Turis']].corr(), 2)
+        correlation_matrix = round(df3[['Jumlah Positif', 'Jumlah Turis']].corr(), 2)
         correlation_matrix 
 
     with col4:
