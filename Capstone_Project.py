@@ -89,6 +89,7 @@ with korelasi:
                           y=["Darat", "Laut", "Udara"],
                           markers=True,
                           template="plotly_white",
+                          labels={"variable": "Pintu Masuk"}
     )
 
     fig_turis_bulan.update_layout(
@@ -96,6 +97,7 @@ with korelasi:
                    xaxis_title='Tahun (Mar-18 sampai Mar-22)',
                    yaxis_title='Jumlah Turis', 
                    plot_bgcolor="white",
+                   legend_title="Pintu Masuk",
                    xaxis=(dict(showgrid=False)),
     )
 
