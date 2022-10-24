@@ -123,7 +123,7 @@ with korelasi:
     col3, col4= st.columns([1.55,2.5])
 
     with col3:
-        correlation_matrix = round(df3[['Positif per Bulan', 'Jumlah Turis']].corr(), 2)
+        correlation_matrix = round(df3[['Positif per Bulan', 'Jumlah Turis']].corr(), 3)
         correlation_matrix 
 
     with col4:
