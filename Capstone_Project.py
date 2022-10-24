@@ -51,12 +51,11 @@ with pendahuluan:
                        y='Jumlah Turis',
                        markers=True, 
                        template="plotly_white",
-                     )
+                       labels={
+                         "Tahun": "Tahun (Mar-18 sampai Mar-22)"},
+                      )
     grafik_1.update_layout(
       title='<b>Jumlah Turis per Tahun<b>',
-      labels={
-        "Tahun": "Tahun (Mar-18 sampai Mar-22)"
-      },
       plot_bgcolor="white",
       xaxis=(dict(showgrid=False)),
       )
